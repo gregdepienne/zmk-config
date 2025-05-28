@@ -1,20 +1,16 @@
-# Update List
-
-- 2024/12/21
-  1. Added support for zmk-studio (just refresh the left hand to use).
-- 2024/10/24
-  1. Modified power supply mode to reduce power consumption.
-  2. Fixed the automatic shut-off feature for RGB power supply.
-
-> If your keyboard was updated before October 24, please update to the latest firmware.
-> 
----
-# Contact Me
-
-For 3D printed model files or any issues and malfunctions with the keyboard, please contact 380465425@qq.com
-
 # Sofle Keymap
-
 
 <img src="keymap-drawer/eyelash_sofle.svg" >
 
+# Qwerty
+Pour saisir une lettre avec un accent grave, pressez la touche ` suivie de la voyelle.
+
+Pour saisir une lettre avec un accent aigu, pressez la touche ' suivie de la voyelle.
+
+Pour saisir une cédille pressez la touche ' suivie de la touche c.
+
+Pour saisir une lettre avec un accent circonflexe, pressez la touche ^ (Maj+6) suivie de la voyelle.
+
+Pour saisir un tréma, pressez la touche " (Maj + ') suivie de la voyelle.
+
+Pour ne saisir qu'un symbole, pressez sa touche suivie de la touche espace. Pour saisir par exemple j'ai, vous devez taper j, ', espace, a et i. !
