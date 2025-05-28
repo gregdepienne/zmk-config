@@ -83,15 +83,29 @@
         layer_3 {
             display-name = "Ergo2qw";
             bindings = <
-&gresc      &kp N1        &kp N2        &kp N3  &kp N4     &kp N5       &kp UP_ARROW     &kp N6      &kp N7     &kp N8    &kp N9     &kp N0    &kp DELETE
-&kp TAB     &kp Q         &kp C         &kp O   &kp P      &kp W        &kp DOWN_ARROW   &kp J       &kp M      &kp D     &sl 1      &kp Y     &kp BACKSPACE
-&kp CAPS    &kp A         &kp S         &kp E   &kp N      &kp F        &kp LEFT_ARROW   &kp L       &kp R      &kp T     &kp I      &kp U     &kp ENTER
-&kp LSHFT   &kp Z         &kp X         &none   &kp V      &kp B        &kp RIGHT_ARROW  &kp PERIOD  &kp H      &kp G     &kp COMMA  &kp K     &kp RIGHT_SHIFT
-&kp C_MUTE  &kp LEFT_WIN  &kp LEFT_ALT  &mo 1   &kp SPACE  &kp LCTRL    &kp ENTER        &kp RCTRL   &kp SPACE  &kp RALT  &mo 2      &kp RGUI
+&gresc      &kp N1        &kp N2        &kp N3     &kp N4     &kp N5       &kp UP_ARROW     &kp N6      &kp N7     &kp N8    &kp N9     &kp N0    &kp DELETE
+&kp TAB     &kp Q         &kp C         &kp O      &kp P      &kp W        &kp DOWN_ARROW   &kp J       &kp M      &kp D     &sl 1      &kp Y     &kp BACKSPACE
+&kp CAPS    &kp A         &kp S         &kp E      &kp N      &kp F        &kp LEFT_ARROW   &kp L       &kp R      &kp T     &kp I      &kp U     &kp ENTER
+&kp LSHFT   &kp Z         &kp X         &kp MINUS  &kp V      &kp B        &kp RIGHT_ARROW  &kp PERIOD  &kp H      &kp G     &kp COMMA  &kp K     &kp RIGHT_SHIFT
+&kp C_MUTE  &kp LEFT_WIN  &kp LEFT_ALT  &mo 1      &kp SPACE  &kp LCTRL    &kp ENTER        &kp RCTRL   &kp SPACE  &kp RALT  &mo 2      &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-            label = "Ergo2qw_low";
+            label = "Ergo2qw_default";
+        };
+
+        layer_4 {
+            label = "Ergo2qw_raise";
+            display-name = "Ergo2qw";
+            bindings = <
+&gresc      &kp N1     &kp N2     &kp N3     &kp N4     &kp N5       &kp UP_ARROW     &kp N6      &kp N7     &kp N8    &kp N9     &kp N0    &trans
+&trans      &kp LS(A)  &kp LS(C)  &kp LS(O)  &kp LS(P)  &kp LS(W)    &kp DOWN_ARROW   &kp J       &kp M      &kp D     &sl 1      &kp Y     &trans
+&trans      &kp LS(A)  &kp LS(S)  &kp E      &kp N      &kp F        &kp LEFT_ARROW   &kp L       &kp R      &kp T     &kp I      &kp U     &trans
+&kp LSHIFT  &kp Z      &kp X      &kp MINUS  &kp V      &kp B        &kp RIGHT_ARROW  &kp PERIOD  &kp H      &kp G     &kp COMMA  &kp K     &kp RIGHT_SHIFT
+&kp C_MUTE  &trans     &trans     &mo 1      &kp SPACE  &kp LCTRL    &kp ENTER        &kp RCTRL   &kp SPACE  &kp RALT  &mo 2      &kp RGUI
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
     };
 };
