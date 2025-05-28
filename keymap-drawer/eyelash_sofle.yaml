@@ -195,7 +195,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  Ergo2qw_low:
+  Ergo2qw_default:
   - {t: '$$mdi:keyboard-esc$$', s: '`'}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
@@ -238,7 +238,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - Z
   - X
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '-', s: _}
   - V
   - B
   - $$mdi:arrow-right-bold$$
@@ -251,6 +251,71 @@ layers:
   - $$mdi:volume-off$$
   - LEFT WIN
   - $$mdi:apple-keyboard-option$$
+  - Fn
+  - $$mdi:keyboard-space$$
+  - $$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:keyboard-space$$
+  - $$mdi:apple-keyboard-option$$
+  - BT
+  - RGUI
+  Ergo2qw:
+  - {t: '$$mdi:keyboard-esc$$', s: '`'}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - $$mdi:arrow-up-bold$$
+  - {t: '6', s: ^}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: '0', s: )}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Sft+A
+  - Sft+C
+  - Sft+O
+  - Sft+P
+  - Sft+W
+  - $$mdi:arrow-down-bold$$
+  - J
+  - M
+  - D
+  - {t: Fn, h: '$$mdi:gesture-tap-hold$$'}
+  - Y
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Sft+A
+  - Sft+S
+  - E
+  - N
+  - F
+  - $$mdi:arrow-left-bold$$
+  - L
+  - R
+  - T
+  - I
+  - U
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:apple-keyboard-shift$$
+  - Z
+  - X
+  - {t: '-', s: _}
+  - V
+  - B
+  - $$mdi:arrow-right-bold$$
+  - .
+  - H
+  - G
+  - {t: ',', s: <}
+  - K
+  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:volume-off$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - Fn
   - $$mdi:keyboard-space$$
   - $$mdi:apple-keyboard-control$$
