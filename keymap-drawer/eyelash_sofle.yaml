@@ -211,42 +211,42 @@ layers:
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:keyboard-tab$$
   - Q
-  - W
-  - E
-  - R
-  - T
-  - $$mdi:arrow-down-bold$$
-  - Y
-  - U
-  - I
+  - C
   - O
   - P
+  - W
+  - $$mdi:arrow-down-bold$$
+  - J
+  - M
+  - D
+  - {t: Fn, h: '$$mdi:gesture-tap-hold$$'}
+  - Y
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-caps$$
   - A
   - S
-  - D
+  - E
+  - N
   - F
-  - G
   - $$mdi:arrow-left-bold$$
-  - H
-  - J
-  - K
   - L
-  - {t: ;, s: ':'}
+  - R
+  - T
+  - I
+  - U
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:apple-keyboard-shift$$
   - Z
   - X
-  - C
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - V
   - B
   - $$mdi:arrow-right-bold$$
-  - N
-  - M
+  - .
+  - H
+  - G
   - {t: ',', s: <}
-  - {t: ., s: '>'}
-  - {t: /, s: '?'}
+  - K
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:volume-off$$
   - LEFT WIN
