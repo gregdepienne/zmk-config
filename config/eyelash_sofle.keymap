@@ -36,12 +36,155 @@
     };
 
     behaviors {
+        gresc: grave_escape {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>, <&kp GRAVE>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+        };
+
+        euro: euro {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N1>, <&kp RA(N5)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        sharp: sharp {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N9>, <&kp LS(N3)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        }
+
+        arob: arobase {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N0>, <&kp LS(N2)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        }
+    };
+
+    macros {
+        chevron_l: chevron_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LEFT_ALT>
+                , <&macro_tap &kp KP_N6 &kp KP_N0>
+                , <&macro_release &kp LEFT_ALT>
+                ;
+        };
+
+        chevron_r: chevron_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LEFT_ALT>
+                , <&macro_tap &kp KP_N6 &kp KP_N2>
+                , <&macro_release &kp LEFT_ALT>
+                ;
+        };
+
+        e_aigu: e_aigu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp SQT &kp E>
+                ;
+        };
+
+        e_grave: e_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp GRAVE &kp E>
+                ;
+        };
+
+        e_circ: e_circonflexe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp KP_N6>
+                , <&macro_release &kp LSHIFT>
+                , <&macro_tap &kp E>
+                ;
+        };
+
+        e_trem: e_trema {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp SQT>
+                , <&macro_release &kp LSHIFT>
+                , <&macro_tap &kp E>
+                ;
+        };
+
+        a_grave: a_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp GRAVE &kp A>
+                ;
+        };
+
+        a_circ: a_circonflexe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp KP_N6>
+                , <&macro_release &kp LSHIFT>
+                , <&macro_tap &kp A>
+                ;
+        };
+
+
+        u_grave: u_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp GRAVE &kp U>
+                ;
+        };
+
+        u_circ: u_circonflexe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp KP_N6>
+                , <&macro_release &kp LSHIFT>
+                , <&macro_tap &kp U>
+                ;
+        };
+
+        u_trem: u_trema {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp SQT>
+                , <&macro_release &kp LSHIFT>
+                , <&macro_tap &kp U>
+                ;
+        };
+        
+    Accent circonflexe ( î, ô ) → ^ + voyelle
+    Tréma (ï, ö) → " + voyelle
+    Cédille (ç) → ’ + c
+
+
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        layer0 {
+        layer_0 {
             bindings = <
 &kp ESC     &kp N1        &kp N2        &kp N3  &kp N4     &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9   &kp N0    &kp DELETE
 &kp TAB     &kp Q         &kp W         &kp E   &kp R      &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
@@ -83,10 +226,10 @@
         layer_3 {
             display-name = "Ergo2qw";
             bindings = <
-&gresc      &kp N1        &kp N2        &kp N3     &kp N4     &kp N5       &kp UP_ARROW     &kp N6      &kp N7     &kp N8    &kp N9     &kp N0    &kp DELETE
+&gresc      &euro         &kp N2        &kp N3     &kp N4     &kp N5       &kp UP_ARROW     &kp N6      &kp N7     &kp N8    &sharp     &arob     &kp DELETE
 &kp TAB     &kp Q         &kp C         &kp O      &kp P      &kp W        &kp DOWN_ARROW   &kp J       &kp M      &kp D     &sl 1      &kp Y     &kp BACKSPACE
-&kp CAPS    &kp A         &kp S         &kp E      &kp N      &kp F        &kp LEFT_ARROW   &kp L       &kp R      &kp T     &kp I      &kp U     &kp ENTER
-&kp LSHFT   &kp Z         &kp X         &kp MINUS  &kp V      &kp B        &kp RIGHT_ARROW  &kp PERIOD  &kp H      &kp G     &kp COMMA  &kp K     &kp RIGHT_SHIFT
+&to 5       &kp A         &kp S         &kp E      &kp N      &kp F        &kp LEFT_ARROW   &kp L       &kp R      &kp T     &kp I      &kp U     &kp ENTER
+&mo 4       &kp Z         &kp X         &kp MINUS  &kp V      &kp B        &kp RIGHT_ARROW  &kp PERIOD  &kp H      &kp G     &kp COMMA  &kp K     &mo 4
 &kp C_MUTE  &kp LEFT_WIN  &kp LEFT_ALT  &mo 1      &kp SPACE  &kp LCTRL    &kp ENTER        &kp RCTRL   &kp SPACE  &kp RALT  &mo 2      &kp RGUI
             >;
 
@@ -95,14 +238,42 @@
         };
 
         layer_4 {
-            label = "Ergo2qw_raise";
-            display-name = "Ergo2qw";
+            label = "Ergo2qw_shift";
+            display-name = "Ergo2qw_shift";
             bindings = <
-&gresc      &kp N1     &kp N2     &kp N3     &kp N4     &kp N5       &kp UP_ARROW     &kp N6      &kp N7     &kp N8    &kp N9     &kp N0    &trans
-&trans      &kp LS(A)  &kp LS(C)  &kp LS(O)  &kp LS(P)  &kp LS(W)    &kp DOWN_ARROW   &kp J       &kp M      &kp D     &sl 1      &kp Y     &trans
-&trans      &kp LS(A)  &kp LS(S)  &kp E      &kp N      &kp F        &kp LEFT_ARROW   &kp L       &kp R      &kp T     &kp I      &kp U     &trans
-&kp LSHIFT  &kp Z      &kp X      &kp MINUS  &kp V      &kp B        &kp RIGHT_ARROW  &kp PERIOD  &kp H      &kp G     &kp COMMA  &kp K     &kp RIGHT_SHIFT
-&kp C_MUTE  &trans     &trans     &mo 1      &kp SPACE  &kp LCTRL    &kp ENTER        &kp RCTRL   &kp SPACE  &kp RALT  &mo 2      &kp RGUI
+&trans      &trans     &chevron_l &chevron_r   &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans    &trans
+&kp LS(TAB) &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &kp EXCL   &trans    &trans
+&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans    &trans
+&kp LSHIFT  &trans     &trans     &kp LS(FSLH) &trans     &trans    &trans   &kp LS(SEMI) &trans     &trans    &kp SEMI   &trans    &kp RSHIFT
+&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+        };
+                
+        layer_5 {
+            label = "Ergo2qw_caps";
+            display-name = "Ergo2qw_caps";
+            bindings = <
+&none       &kp N1     &kp N2     &kp N3       &kp N4     &kp N5    &trans   &kp N6       &kp N7     &kp N8    &kp N9     &kp N0    &trans
+&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans    &trans
+&kp CAPS    &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans    &trans
+&kp LSHIFT  &trans     &trans     &kp LS(FSLH) &trans     &trans    &trans   &kp LS(SEMI) &trans     &trans    &kp SEMI   &trans    &kp RSHIFT
+&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+        };
+                
+        layer_6 {
+            label = "Ergo2qw_1dk";
+            display-name = "Ergo2qw_1dk";
+            bindings = <
+&none       &kp N1     &kp N2        &kp N3       &kp N4     &kp N5     &trans   &kp N6       &kp N7     &kp N8     &kp N9     &kp N0    &trans
+&trans      &kp LS(N6) &kp LS(COMMA) &kp LS(DOT)  &kp LS(N4) &kp LS(N5) &trans   &kp LS(N2)   &kp LS(N7) &kp LS(N8) &kp SQT    &kp GRAVE &trans
+&kp CAPS    &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans    &trans
+&kp LSHIFT  &trans     &trans        &kp LS(FSLH) &trans     &trans     &trans   &kp LS(SEMI) &trans     &trans     &kp SEMI   &trans    &kp RSHIFT
+&trans      &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
