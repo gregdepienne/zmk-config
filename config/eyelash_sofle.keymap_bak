@@ -36,9 +36,8 @@
     };
 
     macros {
-        // PONCTUATION
-        //////////////
-
+        // PONCT
+        ////////
         macro_chevron_l: macro_chevron_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -60,50 +59,27 @@
         };
 
         macro_sp_insec: macro_space_insec {
-            // Win : Alt(0160) Lin : Ctrl+Shift+U, then 00A0
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LEFT_ALT>
-                , <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N6 &kp KP_N0>
+                , <&macro_tap &kp KP_N6 &kp KP_N0>   // !!!
                 , <&macro_release &kp LEFT_ALT>
                 ;
         };
 
-        macro_sqt: macro_simple_quote {
+        macro_sp_trema: macro_space_trema {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp DQT &kp SPACE>
-                ;
-        };
-
-        macro_dqt: macro_double_quote {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp DQT &kp SPACE>
-                ;
-        };
-
-        macro_caret: macro_caret {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp CARET &kp SPACE>
-                ;
-        };
-
-        macro_grave: macro_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp GRAVE &kp SPACE>
+                = <&macro_press &kp LEFT_ALT>
+                , <&macro_tap &kp KP_N6 &kp KP_N2>   // !!!
+                , <&macro_release &kp LEFT_ALT>
                 ;
         };
 
         // MINUSCULES
-        ///////////// 
+        /////////////
 
         macro_e_aigu: macro_e_aigu {
             compatible = "zmk,behavior-macro";
@@ -125,7 +101,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp CARET &kp E>
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp KP_N6>
+                , <&macro_release &kp LSHIFT>
+                , <&macro_tap &kp E>
                 ;
         };
 
@@ -133,7 +112,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp DQT &kp E>
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp SQT>
+                , <&macro_release &kp LSHIFT>
+                , <&macro_tap &kp E>
                 ;
         };
 
@@ -149,17 +131,13 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp CARET &kp A>
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp KP_N6>
+                , <&macro_release &kp LSHIFT>
+                , <&macro_tap &kp A>
                 ;
         };
 
-        macro_a_trem: macro_a_trema {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp DQT &kp A>
-                ;
-        };
 
         macro_u_grave: macro_u_grave {
             compatible = "zmk,behavior-macro";
@@ -173,7 +151,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp CARET &kp U>
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp KP_N6>
+                , <&macro_release &kp LSHIFT>
+                , <&macro_tap &kp U>
                 ;
         };
 
@@ -181,7 +162,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp DQT &kp U>
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp SQT>
+                , <&macro_release &kp LSHIFT>
+                , <&macro_tap &kp U>
                 ;
         };
 
@@ -189,7 +173,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp CARET &kp I>
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp KP_N6>
+                , <&macro_release &kp LSHIFT>
+                , <&macro_tap &kp I>
                 ;
         };
 
@@ -197,7 +184,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp DQT &kp I>
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp SQT>
+                , <&macro_release &kp LSHIFT>
+                , <&macro_tap &kp I>
                 ;
         };
 
@@ -205,7 +195,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp CARET &kp O>
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp KP_N6>
+                , <&macro_release &kp LSHIFT>
+                , <&macro_tap &kp O>
                 ;
         };
 
@@ -213,7 +206,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp DQT &kp O>
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp SQT>
+                , <&macro_release &kp LSHIFT>
+                , <&macro_tap &kp O>
                 ;
         };
 
@@ -221,7 +217,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp SQT &kp C>
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp SQT>
+                , <&macro_release &kp LSHIFT>
+                , <&macro_tap &kp C>
                 ;
         };
 
@@ -255,7 +254,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp N6>
+                , <&macro_tap &kp KP_N6>
                 , <&macro_tap &kp E>
                 , <&macro_release &kp LSHIFT>
                 ;
@@ -288,22 +287,12 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp N6>
+                , <&macro_tap &kp KP_N6>
                 , <&macro_tap &kp A>
                 , <&macro_release &kp LSHIFT>
                 ;
         };
 
-        macro_cap_a_trem: macro_cap_a_trema {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp SQT>
-                , <&macro_tap &kp A>
-                , <&macro_release &kp LSHIFT>
-                ;
-        };
 
         macro_cap_u_grave: macro_cap_u_grave {
             compatible = "zmk,behavior-macro";
@@ -321,7 +310,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp N6>
+                , <&macro_tap &kp KP_N6>
                 , <&macro_tap &kp U>
                 , <&macro_release &kp LSHIFT>
                 ;
@@ -343,7 +332,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp N6>
+                , <&macro_tap &kp KP_N6>
                 , <&macro_tap &kp I>
                 , <&macro_release &kp LSHIFT>
                 ;
@@ -365,7 +354,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp N6>
+                , <&macro_tap &kp KP_N6>
                 , <&macro_tap &kp O>
                 , <&macro_release &kp LSHIFT>
                 ;
@@ -392,14 +381,13 @@
                 , <&macro_release &kp LSHIFT>
                 ;
         };
-
     };    
 
   behaviors {
         gresc: grave_escape {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp ESC>, <&macro_grave>;
+            bindings = <&kp ESC>, <&kp GRAVE>;
             mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
         };
 
@@ -481,111 +469,7 @@
             tapping-term-ms = <200>;
             bindings = <&to 0>, <&tog 7>;
         };
-
-        e_aigu: e_aigu {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&macro_e_aigu>, <&macro_cap_e_aigu>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
- 
-        e_grave: e_grave {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&macro_e_grave>, <&macro_cap_e_grave>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        e_circ: e_circ {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&macro_e_circ>, <&macro_cap_e_circ>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        e_trem: e_trem {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&macro_e_trem>, <&macro_cap_e_trem>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        a_grave: a_grave {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&macro_a_grave>, <&macro_cap_a_grave>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        a_circ: a_circ {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&macro_a_circ>, <&macro_cap_a_circ>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        a_trem: a_trem {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&macro_a_trem>, <&macro_cap_a_trem>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        u_grave: u_grave {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&macro_u_grave>, <&macro_cap_u_grave>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        u_circ: u_circ {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&macro_u_circ>, <&macro_cap_u_circ>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        u_trem: u_trem {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&macro_u_trem>, <&macro_cap_u_trem>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        i_circ: i_circ {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&macro_i_circ>, <&macro_cap_i_circ>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        i_trem: i_trem {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&macro_i_trem>, <&macro_cap_i_trem>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        o_circ: o_circ {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&macro_o_circ>, <&macro_cap_o_circ>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        o_trem: o_trem {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&macro_o_trem>, <&macro_cap_o_trem>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        c_cedi: c_cedi {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&macro_c_cedi>, <&macro_cap_c_cedi>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+        // Faire espace_espace_insec et les majuscules des caractères accentués
     };
 
     keymap {
@@ -617,7 +501,7 @@
     
         ergol_layer { // layer 1
 
-            display-name = "Ergo2qw";  // Ergol sur QWERTY US International
+            display-name = "Ergo2qw";
             label = "Ergo2qw_default";
 
 // --------------------------------------------------------------------------------------------------------------------
@@ -645,19 +529,19 @@
             display-name = "Ergo2qw_1dk";
 
 // --------------------------------------------------------------------------------------------------------------
-// |         |      | “ !! | ” !! |      |      |   |         |   |      |       |       |      |       |         |    !!!
-// |         |  â   |  ç   | œ !! |   ô  |      |   |         |   |      |       |   _   |  ¨   |   û   |         |    !!!
-// |         |  à   |  é   |  è   |   ê  |      |   |         |   |   (  |    )  |   î   |  ï   |   ù   |         |
-// |         | æ !! |      | ‑ !! | – !! | — !! |   |         |   | … !! |       |       |      |       |         |    !!!
-// |      |  |      |      |      |      |      |   |         |   |      |       |       |      |       |
+// |         |  „  |  “  |  ”   |   ¢  |   ‰  |   |         |   |      |       |       |  §   |   ¶   |         |    !!!
+// |         |  â  |  ç  |  œ   |   ô  |      |   |         |   |      |    µ  |   _   |  ¨   |   û   |         |    !!!
+// |         |  à  |  é  |  è   |   ê  |   ñ  |   |         |   |   (  |    )  |   î   |  ï   |   ù   |         |    !!!
+// |         |  æ  |  ß  | ‑ ¿  |   –  |   —  |   |         |   |   …  |       |       |      |       |         |    !!!
+// |      |  |     |     |      |      |      |   |         |   |      |       |       |      |       |
 // | C_VOL_UP ! C_VOL_DN |
     
             bindings = <
-&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans    &trans   &trans    &trans     &trans    &trans
-&trans      &a_circ    &c_cedi    &trans       &o_circ    &trans    &trans   &trans    &trans   &kp UNDER &sl 3      &u_circ    &trans
-&trans      &a_grave   &e_aigu    &e_grave     &e_circ    &trans    &trans   &kp LPAR  &kp RPAR &i_circ   &i_trem    &u_grave  &trans
-&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans    &trans   &trans    &trans     &trans    &trans
-&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans    &trans   &trans    &trans     &trans
+&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans    &trans
+&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &sl 3      &trans    &trans
+&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans    &trans
+&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans    &trans
+&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -670,18 +554,18 @@
 
 // --------------------------------------------------------------------------------------------------------------
 // |         |     |     |      |      |      |   |         |   |      |       |       |      |       |         |   
-// |         |     |     |  ö   |      |      |   |         |   |      |       |       |  "   | ÿ !!  |         |   !!!
-// |         |  ä  |     |  ë   |      |      |   |         |   |      |       |       |  ï   |   ü   |         |
+// |         |     |     |  ö   |      |      |   |         |   |      |       |       |      |   ÿ   |         |    !!!
+// |         |  ä  |     |  ë   |      |      |   |         |   |      |       |       |  ï   |   ü   |         |    !!!
 // |         |     |     |      |      |      |   |         |   |      |       |       |      |       |         |
-// |      |  |     |     |      | ¨ !! |     |   |        |   |      | ¨ !!  |       |      |       |               !!!   " et pas trema !! 
+// |      |  |     |     |      |      |      |   |    ¨    |   |      |       |       |      |       |              !!!
 // | C_VOL_UP ! C_VOL_DN |
     
             bindings = <
-&trans  &trans    &trans   &trans    &trans     &trans    &trans   &trans   &trans     &trans    &trans     &trans    &trans
-&trans  &trans    &trans   &o_trem   &trans     &trans    &trans   &trans   &trans     &trans    &kp DQT    &trans    &trans
-&trans  &a_trem   &trans   &e_trem   &trans     &trans    &trans   &trans   &trans     &trans    &i_trem    &u_trem   &trans
-&trans  &trans    &trans   &trans    &trans     &trans    &trans   &trans   &trans     &trans    &trans     &trans    &trans
-&trans  &trans    &trans   &trans    &macro_dqt &trans    &trans   &trans   &macro_dqt &trans    &trans     &trans
+&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans    &trans
+&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans    &trans
+&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans    &trans
+&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans    &trans
+&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -725,11 +609,11 @@
 // | C_VOL_UP ! C_VOL_DN |
     
             bindings = <
-&trans      &trans       &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans       &trans
-&trans      &macro_caret &kp LT        &kp GT       &kp DLLR   &kp PRCNT  &trans   &kp AT       &kp AMPS   &kp STAR   &macro_sqt &macro_grave &trans
-&trans      &kp LBRC     &kp LPAR      &kp RPAR     &kp RBRC   &kp EQUAL  &trans   &kp BSLH     &kp PLUS   &kp MINUS  &kp FSLH   &macro_dqt   &trans
-&trans      &kp TILDE    &kp LBKT      &kp RBKT     &kp UNDER  &kp HASH   &trans   &kp PIPE     &kp EXCL   &kp SEMI   &kp COLON  &kp QMARK    &trans
-&trans      &trans       &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans
+&trans      &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans    &trans
+&trans      &kp CARET  &kp LT        &kp GT       &kp DLLR   &kp PRCNT  &trans   &kp AT       &kp AMPS   &kp STAR   &kp SQT    &kp GRAVE &trans
+&trans      &kp LBRC   &kp LPAR      &kp RPAR     &kp RBRC   &kp EQUAL  &trans   &kp BSLH     &kp PLUS   &kp MINUS  &kp FSLH   &kp DQT   &trans
+&trans      &kp TILDE  &kp LBKT      &kp RBKT     &kp UNDER  &kp HASH   &trans   &kp PIPE     &kp EXCL   &kp SEMI   &kp COLON  &kp QMARK &trans
+&trans      &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;

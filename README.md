@@ -14,3 +14,8 @@ Pour saisir une lettre avec un accent circonflexe, pressez la touche ^ (Maj+6) s
 Pour saisir un tréma, pressez la touche " (Maj + ') suivie de la voyelle.
 
 Pour ne saisir qu'un symbole, pressez sa touche suivie de la touche espace. Pour saisir par exemple j'ai, vous devez taper j, ', espace, a et i. !
+
+
+
+
+https://miamioh.edu/cas/centers-institutes/interactive-language-resource-center/tech-support/
