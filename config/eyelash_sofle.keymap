@@ -35,9 +35,9 @@
         tap-ms = <100>;
     };
 
-  
-
     macros {
+        // PONCT
+        ////////
         macro_chevron_l: macro_chevron_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -58,7 +58,30 @@
                 ;
         };
 
-        e_aigu: e_aigu {
+        macro_sp_insec: macro_space_insec {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LEFT_ALT>
+                , <&macro_tap &kp KP_N6 &kp KP_N0>   // !!!
+                , <&macro_release &kp LEFT_ALT>
+                ;
+        };
+
+        macro_sp_trema: macro_space_trema {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LEFT_ALT>
+                , <&macro_tap &kp KP_N6 &kp KP_N2>   // !!!
+                , <&macro_release &kp LEFT_ALT>
+                ;
+        };
+
+        // MINUSCULES
+        /////////////
+
+        macro_e_aigu: macro_e_aigu {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -66,7 +89,7 @@
                 ;
         };
 
-        e_grave: e_grave {
+        macro_e_grave: macro_e_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -74,7 +97,7 @@
                 ;
         };
 
-        e_circ: e_circonflexe {
+        macro_e_circ: macro_e_circonflexe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -85,7 +108,7 @@
                 ;
         };
 
-        e_trem: e_trema {
+        macro_e_trem: macro_e_trema {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -96,7 +119,7 @@
                 ;
         };
 
-        a_grave: a_grave {
+        macro_a_grave: macro_a_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -104,7 +127,7 @@
                 ;
         };
 
-        a_circ: a_circonflexe {
+        macro_a_circ: macro_a_circonflexe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -116,7 +139,7 @@
         };
 
 
-        u_grave: u_grave {
+        macro_u_grave: macro_u_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -124,7 +147,7 @@
                 ;
         };
 
-        u_circ: u_circonflexe {
+        macro_u_circ: macro_u_circonflexe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -135,7 +158,7 @@
                 ;
         };
 
-        u_trem: u_trema {
+        macro_u_trem: macro_u_trema {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -146,7 +169,7 @@
                 ;
         };
 
-        i_circ: i_circonflexe {
+        macro_i_circ: macro_i_circonflexe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -157,7 +180,7 @@
                 ;
         };
 
-        i_trem: i_trema {
+        macro_i_trem: macro_i_trema {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -168,7 +191,7 @@
                 ;
         };
 
-        o_circ: o_circonflexe {
+        macro_o_circ: macro_o_circonflexe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -179,7 +202,7 @@
                 ;
         };
 
-        o_trem: o_trema {
+        macro_o_trem: macro_o_trema {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -190,7 +213,7 @@
                 ;
         };
 
-        c_cedi: c_cedille {
+        macro_c_cedi: macro_c_cedille {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -200,9 +223,165 @@
                 , <&macro_tap &kp C>
                 ;
         };
-    };    
 
-    // Faire les majuscules
+        // CAPITALES
+        ////////////
+
+        macro_cap_e_aigu: macro_cap_e_aigu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp SQT>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp E>
+                , <&macro_release &kp LSHIFT>
+                ;
+        };
+
+        macro_cap_e_grave: macro_cap_e_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp GRAVE>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp E>
+                , <&macro_release &kp LSHIFT>
+                ;
+        };
+
+        macro_cap_e_circ: macro_cap_e_circonflexe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp KP_N6>
+                , <&macro_tap &kp E>
+                , <&macro_release &kp LSHIFT>
+                ;
+        };
+
+        macro_cap_e_trem: macro_cap_e_trema {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp SQT>
+                , <&macro_tap &kp E>
+                , <&macro_release &kp LSHIFT>
+                ;
+        };
+
+        macro_cap_a_grave: macro_cap_a_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp GRAVE>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp A>
+                , <&macro_release &kp LSHIFT>
+                ;
+        };
+
+        macro_cap_a_circ: macro_cap_a_circonflexe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp KP_N6>
+                , <&macro_tap &kp A>
+                , <&macro_release &kp LSHIFT>
+                ;
+        };
+
+
+        macro_cap_u_grave: macro_cap_u_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp GRAVE>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp U>
+                , <&macro_release &kp LSHIFT>
+                ;
+        };
+
+        macro_cap_u_circ: macro_cap_u_circonflexe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp KP_N6>
+                , <&macro_tap &kp U>
+                , <&macro_release &kp LSHIFT>
+                ;
+        };
+
+        macro_cap_u_trem: macro_cap_u_trema {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp SQT>
+                , <&macro_tap &kp U>
+                , <&macro_release &kp LSHIFT>
+                ;
+        };
+
+        macro_cap_i_circ: macro_cap_i_circonflexe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp KP_N6>
+                , <&macro_tap &kp I>
+                , <&macro_release &kp LSHIFT>
+                ;
+        };
+
+        macro_cap_i_trem: macro_cap_i_trema {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp SQT>
+                , <&macro_tap &kp I>
+                , <&macro_release &kp LSHIFT>
+                ;
+        };
+
+        macro_cap_o_circ: macro_cap_o_circonflexe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp KP_N6>
+                , <&macro_tap &kp O>
+                , <&macro_release &kp LSHIFT>
+                ;
+        };
+
+        macro_cap_o_trem: macro_cap_o_trema {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp SQT>
+                , <&macro_tap &kp O>
+                , <&macro_release &kp LSHIFT>
+                ;
+        };
+
+        macro_cap_c_cedi: macro_cap_c_cedille {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp SQT>
+                , <&macro_tap &kp C>
+                , <&macro_release &kp LSHIFT>
+                ;
+        };
+    };    
 
   behaviors {
         gresc: grave_escape {
@@ -268,14 +447,29 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        dead: dead_key_expl {
+        dead1: dead_1_key_expl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&sl 2>, <&kp LS(N1)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // Faire espace_espace_insec
+        td0: tap_dance_ergol_conf {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ERGOL_CONF";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&to 1>, <&tog 7>;
+        };
+
+        td1: tap_dance_qwerty_conf {
+            compatible = "zmk,behavior-tap-dance";
+            label = "QWERTY_CONF";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&to 0>, <&tog 7>;
+        };
+        // Faire espace_espace_insec et les majuscules des caractères accentués
     };
 
     keymap {
@@ -291,7 +485,7 @@
 // | TAB     |  Q  |  W  |  E   |  R   |  T   |   | DOWN_ARROW  |   |  Y   |  U    |  I    |  O   |   P   | BACKSPACE |
 // | CAPS    |  A  |  S  |  D   |  F   |  G   |   | LEFT_ARROW  |   |  H   |  J    |  K    |  L   |   ;   | ENTER     |
 // | L_SHIFT |  Z  |  X  |  C   |  V   |  B   |   | RIGHT_ARROW |   |  N   |  M    |  ,    |  .   |   /   | SHIFT     |
-// | C_MUTE  |  | L_GUI | L_ALT | NAV | SPACE| L_CTL |  | ENTER |  | R_CTL | SPACE | R_ALT | TO_ERGOL | R_GUI |
+// | C_MUTE  |  | L_GUI | L_ALT | NAV | SPACE| L_CTL |  | ENTER |  | R_CTL | SPACE | R_ALT | TD_1_7 | R_GUI |
 // | C_VOL_UP ! C_VOL_DN |
 
             bindings = <
@@ -315,31 +509,55 @@
 // |         |     |  C  |  O   |  P   |  W   |   |             |   |  J   |  U    |  D    | DK ! |   Y   |           |
 // | TOG_4   |     |     |  E   |  N   |  F   |   |             |   |  L   |  R    |  T    |  I   |   U   |           |
 // |         |     |     |  - ? |      |      |   |             |   | . :  |  H    |  G    |  , ; |   K   |           |
-// |      |  |      |      | NAV |     |     |  |       |  |      |       | TO_CHARS | TO_QWERTY |      |
+// |      |  |      |      | NAV | SP SP_INSEC |     |  |       |  |      | SP SP_INSEC | MO_CHARS | TD_0_7 |      |       !!!
 // | C_VOL_UP ! C_VOL_DN |
 
             bindings = <
 &trans      &euro         &chevron_l    &chevron_r &trans     &trans       &trans           &trans      &trans     &trans    &sharp     &arob     &trans
-&trans      &trans        &kp C         &kp O      &kp P      &kp W        &trans           &kp J       &kp M      &kp D     &dead      &kp Y     &trans
+&trans      &trans        &kp C         &kp O      &kp P      &kp W        &trans           &kp J       &kp M      &kp D     &dead1     &kp Y     &trans
 &tog 4      &trans        &trans        &kp E      &kp N      &kp F        &trans           &kp L       &kp R      &kp T     &kp I      &kp U     &trans
 &trans      &trans        &trans        &moins     &trans     &trans       &trans           &point      &kp H      &kp G     &virg      &kp K     &trans
-&trans      &trans        &trans        &mo 1      &trans     &trans       &trans           &trans      &trans     &to 3    &to 0      &trans
+&trans      &trans        &trans        &mo 6      &trans     &trans       &trans           &trans      &trans     &mo 5     &td1       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
-        dead_k_layer { // layer 2
+        dead_1k_layer { // layer 2
 
-            label = "Ergo2qw_dk";
-            display-name = "Ergo2qw_dk";
+            label = "Ergo2qw_1dk";
+            display-name = "Ergo2qw_1dk";
 
 // --------------------------------------------------------------------------------------------------------------
-// |         |  „  |  “  |  ”   |   ¢  |   ‰  |   |         |   |      |       |       |  §   |   ¶   |         |   Do be done
-// |         |  â  |  ç  |  œ   |   ô  |      |   |         |   |      |    µ  |   _   |  ¨   |   û   |         |
-// |         |  à  |  é  |  è   |   ê  |   ñ  |   |         |   |   (  |    )  |   î   |  ï   |   ù   |         |
-// |         |  æ  |  ß  | ‑ ¿  |   –  |   —  |   |         |   |   …  |       |       |      |       |         |
+// |         |  „  |  “  |  ”   |   ¢  |   ‰  |   |         |   |      |       |       |  §   |   ¶   |         |    !!!
+// |         |  â  |  ç  |  œ   |   ô  |      |   |         |   |      |    µ  |   _   |  ¨   |   û   |         |    !!!
+// |         |  à  |  é  |  è   |   ê  |   ñ  |   |         |   |   (  |    )  |   î   |  ï   |   ù   |         |    !!!
+// |         |  æ  |  ß  | ‑ ¿  |   –  |   —  |   |         |   |   …  |       |       |      |       |         |    !!!
 // |      |  |     |     |      |      |      |   |         |   |      |       |       |      |       |
+// | C_VOL_UP ! C_VOL_DN |
+    
+            bindings = <
+&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans    &trans
+&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &sl 3      &trans    &trans
+&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans    &trans
+&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans    &trans
+&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+        };
+
+        dead_2k_layer { // layer 3
+
+            label = "Ergo2qw_2dk";
+            display-name = "Ergo2qw_2dk";
+
+// --------------------------------------------------------------------------------------------------------------
+// |         |     |     |      |      |      |   |         |   |      |       |       |      |       |         |   
+// |         |     |     |  ö   |      |      |   |         |   |      |       |       |      |   ÿ   |         |    !!!
+// |         |  ä  |     |  ë   |      |      |   |         |   |      |       |       |  ï   |   ü   |         |    !!!
+// |         |     |     |      |      |      |   |         |   |      |       |       |      |       |         |
+// |      |  |     |     |      |      |      |   |    ¨    |   |      |       |       |      |       |              !!!
 // | C_VOL_UP ! C_VOL_DN |
     
             bindings = <
@@ -353,32 +571,7 @@
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
-        chars_layer { // layer 3
-
-            label = "Ergo2qw_chars";
-            display-name = "Ergo2qw_chars";
-
-// --------------------------------------------------------------------------------------------------------------
-// |         |     |     |      |      |      |   |         |   |      |       |       |      |       |         |   indices ???
-// |         |  ^  |  <  |  >   |   $  |   %  |   |         |   |   @  |   &   |   *   |  '   |   `   |         |   Do be done
-// |         |  â  |  ç  |  œ   |   ô  |      |   |         |   |   \  |   +   |   -   |  /   |   "   |         |
-// |         |  à  |  é  |  è   |   ê  |   ñ  |   |         |   |   |  |   !   |   ;   |  :   |   ?   |         |
-// |      |  |     |     |      |      |      |   |         |   |      |       |       |      |       |
-// | C_VOL_UP ! C_VOL_DN |
-    
-            bindings = <
-&trans      &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans    &trans
-&trans      &kp LS(N6) &kp LS(COMMA) &kp LS(DOT)  &kp LS(N4) &kp LS(N5) &trans   &kp LS(N2)   &kp LS(N7) &kp LS(N8) &kp SQT    &kp GRAVE &trans
-&trans      &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans    &trans
-&trans      &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans    &trans
-&trans      &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans    &trans
-&trans      &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-        };
-
-        caps_layer { // layer 4 ?? en faire une conditionnelle ? avec la D_K et CHARS 
+        caps_layer { // layer 4 
 
             label = "Ergo2qw_caps";
             display-name = "Ergo2qw_caps";
@@ -401,24 +594,49 @@
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
+
+        chars_layer { // layer 5
+
+            label = "Ergo2qw_chars";
+            display-name = "Ergo2qw_chars";
+
+// --------------------------------------------------------------------------------------------------------------
+// |         |     |     |      |      |      |   |         |   |      |       |       |      |       |         |   indices !!!
+// |         |  ^  |  <  |  >   |   $  |   %  |   |         |   |   @  |   &   |   *   |  '   |   `   |         |   
+// |         |  {  |  (  |  )   |   }  |   =  |   |         |   |   \  |   +   |   -   |  /   |   "   |         |
+// |         |  ~  |  [  |  ]   |   _  |   #  |   |         |   |   |  |   !   |   ;   |  :   |   ?   |         |
+// |      |  |     |     |      |      |      |   |         |   |      |       |       |      |       |
+// | C_VOL_UP ! C_VOL_DN |
+    
+            bindings = <
+&trans      &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans    &trans
+&trans      &kp CARET  &kp LT        &kp GT       &kp DLLR   &kp PRCNT  &trans   &kp AT       &kp AMPS   &kp STAR   &kp SQT    &kp GRAVE &trans
+&trans      &kp LBRC   &kp LPAR      &kp RPAR     &kp RBRC   &kp EQUAL  &trans   &kp BSLH     &kp PLUS   &kp MINUS  &kp FSLH   &kp DQT   &trans
+&trans      &kp TILDE  &kp LBKT      &kp RBKT     &kp UNDER  &kp HASH   &trans   &kp PIPE     &kp EXCL   &kp SEMI   &kp COLON  &kp QMARK &trans
+&trans      &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans    &trans
+&trans      &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+        };
         
-        nav_fn_kp_layer { // layer doit aller à la fin
+        nav_fn_kp_layer { // layer 6 
             
             display-name = "Fn-Nav-KP";
             label = "Fn-Nav-KP";
             
             bindings = <
-&kp GRAVE   &kp F1           &kp F2          &kp F3          &kp F4           &kp F5             &mmv MOVE_UP     &kp F6     &kp F7     &kp F8     &kp F9           &kp F10       &kp F11
-&trans      &kp TAB          &kp HOME        &kp UP_ARROW    &kp END          &kp PG_UP          &mmv MOVE_DOWN   &kp SLASH  &kp KP_N7  &kp KP_N8  &kp KP_N9        &kp ASTERISK  &kp F12
-&trans      &kp CAPS         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_DN          &mmv MOVE_LEFT   &kp MINUS  &kp KP_N4  &kp KP_N5  &kp KP_N6        &kp KP_N0     &trans
-&trans      &rgb_ug RGB_OFF  &kp C_VOL_DN    &kp C_MUTE      &kp C_VOLUME_UP  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &kp COMMA  &kp KP_N1  &kp KP_N2  &kp KP_NUMBER_3  &kp KP_DOT    &trans
-&kp C_MUTE  &trans           &trans          &trans          &trans           &trans             &mkp LCLK        &trans     &trans     &trans     &trans           &trans
+&kp GRAVE   &kp F1           &kp F2          &kp F3          &kp F4           &kp F5             &mmv MOVE_UP     &kp F6        &kp F7     &kp F8     &kp F9     &kp F10         &kp F11
+&trans      &kp INS          &kp HOME        &kp UP_ARROW    &kp END          &kp PG_UP          &mmv MOVE_DOWN   &kp KP_SLASH  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MULTIPLY &kp F12
+&trans      &kp PSCRN        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_DN          &mmv MOVE_LEFT   &kp KP_MINUS  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_N0       &trans
+&trans      &none            &kp C_VOL_DN    &kp C_MUTE      &kp C_VOLUME_UP  &none              &mmv MOVE_RIGHT  &kp KP_PLUS   &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT      &trans
+&kp C_MUTE  &trans           &trans          &trans          &trans           &trans             &mkp LCLK        &trans        &trans     &trans     &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
         };
 
-        config_layer { // layer -- doit aller à la toute fin, faire un double appui sur la touche layer !!
+        config_layer { // layer 7 
             display-name = "config";
             label = "config";
             
@@ -427,7 +645,7 @@
 &sys_reset   &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans          &trans           &trans           &trans  &trans  &sys_reset
 &bootloader  &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans          &trans           &trans           &trans  &trans  &bootloader
 &trans       &trans        &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &rgb_ug RGB_ON  &rgb_ug RGB_OFF  &rgb_ug RGB_EFF  &trans  &trans  &trans
-&trans       &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans          &trans           &trans           &trans  &trans
+&trans       &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans          &trans           &trans           &tog 7  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
