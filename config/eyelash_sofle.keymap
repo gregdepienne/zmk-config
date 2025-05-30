@@ -613,7 +613,6 @@
 &trans      &kp CARET  &kp LT        &kp GT       &kp DLLR   &kp PRCNT  &trans   &kp AT       &kp AMPS   &kp STAR   &kp SQT    &kp GRAVE &trans
 &trans      &kp LBRC   &kp LPAR      &kp RPAR     &kp RBRC   &kp EQUAL  &trans   &kp BSLH     &kp PLUS   &kp MINUS  &kp FSLH   &kp DQT   &trans
 &trans      &kp TILDE  &kp LBKT      &kp RBKT     &kp UNDER  &kp HASH   &trans   &kp PIPE     &kp EXCL   &kp SEMI   &kp COLON  &kp QMARK &trans
-&trans      &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans    &trans
 &trans      &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans
             >;
 
