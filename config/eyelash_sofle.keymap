@@ -315,7 +315,7 @@
 // |         |     |  C  |  O   |  P   |  W   |   |             |   |  J   |  U    |  D    | DK ! |   Y   |           |
 // | TOG_4   |     |     |  E   |  N   |  F   |   |             |   |  L   |  R    |  T    |  I   |   U   |           |
 // |         |     |     |  - ? |      |      |   |             |   | . :  |  H    |  G    |  , ; |   K   |           |
-// |      |  |      |      | NAV |     |     |  |       |  |      |       | CHARS | TO_QWERTY |      |
+// |      |  |      |      | NAV |     |     |  |       |  |      |       | TO_CHARS | TO_QWERTY |      |
 // | C_VOL_UP ! C_VOL_DN |
 
             bindings = <
@@ -323,7 +323,7 @@
 &trans      &trans        &kp C         &kp O      &kp P      &kp W        &trans           &kp J       &kp M      &kp D     &dead      &kp Y     &trans
 &tog 4      &trans        &trans        &kp E      &kp N      &kp F        &trans           &kp L       &kp R      &kp T     &kp I      &kp U     &trans
 &trans      &trans        &trans        &moins     &trans     &trans       &trans           &point      &kp H      &kp G     &virg      &kp K     &trans
-&trans      &trans        &trans        &mo 1      &trans     &trans       &trans           &trans      &trans     &to___    &to 0      &trans
+&trans      &trans        &trans        &mo 1      &trans     &trans       &trans           &trans      &trans     &to 3    &to 0      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
