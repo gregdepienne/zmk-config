@@ -319,7 +319,7 @@
 // | C_VOL_UP ! C_VOL_DN |
 
             bindings = <
-&trans      &euro         &chevron_l    &chevron_r &trans     &kp trans    &trans           &trans      &trans     &trans    &sharp     &arob     &trans
+&trans      &euro         &chevron_l    &chevron_r &trans     &trans       &trans           &trans      &trans     &trans    &sharp     &arob     &trans
 &trans      &trans        &kp C         &kp O      &kp P      &kp W        &trans           &kp J       &kp M      &kp D     &dead      &kp Y     &trans
 &tog 4      &trans        &trans        &kp E      &kp N      &kp F        &trans           &kp L       &kp R      &kp T     &kp I      &kp U     &trans
 &trans      &trans        &trans        &moins     &trans     &trans       &trans           &point      &kp H      &kp G     &virg      &kp K     &trans
@@ -343,7 +343,7 @@
 // | C_VOL_UP ! C_VOL_DN |
     
             bindings = <
-&none       &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans    &trans
+&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans    &trans
 &trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans    &trans
 &trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans    &trans
 &trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans    &trans
@@ -367,11 +367,12 @@
 // | C_VOL_UP ! C_VOL_DN |
     
             bindings = <
-&none       &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans    &trans
-&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans    &trans
-&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans    &trans
-&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans    &trans
-&trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans       &trans     &trans    &trans     &trans
+&trans      &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans    &trans
+&trans      &kp LS(N6) &kp LS(COMMA) &kp LS(DOT)  &kp LS(N4) &kp LS(N5) &trans   &kp LS(N2)   &kp LS(N7) &kp LS(N8) &kp SQT    &kp GRAVE &trans
+&trans      &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans    &trans
+&trans      &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans    &trans
+&trans      &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans    &trans
+&trans      &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -432,51 +433,5 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-            
-        layer_6 {
-            label = "Ergo2qw_altr";
-            display-name = "Ergo2qw_altr";
-            bindings = <
-&none       &kp N1     &kp N2        &kp N3       &kp N4     &kp N5     &trans   &kp N6       &kp N7     &kp N8     &kp N9     &kp N0    &trans
-&trans      &kp LS(N6) &kp LS(COMMA) &kp LS(DOT)  &kp LS(N4) &kp LS(N5) &trans   &kp LS(N2)   &kp LS(N7) &kp LS(N8) &kp SQT    &kp GRAVE &trans
-&kp CAPS    &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans    &trans
-&kp LSHIFT  &trans     &trans        &kp LS(FSLH) &trans     &trans     &trans   &kp LS(SEMI) &trans     &trans     &kp SEMI   &trans    &kp RSHIFT
-&trans      &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-        };
-
-        // finir, 
-
-        layer_7 {
-            label = "Ergo2qw_1dk";
-            display-name = "Ergo2qw_1dk";
-            bindings = <
-&none       &kp N1     &kp N2        &kp N3       &kp N4     &kp N5     &trans   &kp N6       &kp N7     &kp N8     &kp N9     &kp N0    &trans
-&trans      &kp LS(N6) &kp LS(COMMA) &kp LS(DOT)  &kp LS(N4) &kp LS(N5) &trans   &kp LS(N2)   &kp LS(N7) &kp LS(N8) &kp SQT    &kp GRAVE &trans
-&kp CAPS    &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans    &trans
-&kp LSHIFT  &trans     &trans        &kp LS(FSLH) &trans     &trans     &trans   &kp LS(SEMI) &trans     &trans     &kp SEMI   &trans    &kp RSHIFT
-&trans      &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-        };
-
-        // faire, tripler avec shift et caps 
-
-        layer_8 {
-            label = "Ergo2qw_2dk";
-            display-name = "Ergo2qw_2dk";
-            bindings = <
-&none       &kp N1     &kp N2        &kp N3       &kp N4     &kp N5     &trans   &kp N6       &kp N7     &kp N8     &kp N9     &kp N0    &trans
-&trans      &kp LS(N6) &kp LS(COMMA) &kp LS(DOT)  &kp LS(N4) &kp LS(N5) &trans   &kp LS(N2)   &kp LS(N7) &kp LS(N8) &kp SQT    &kp GRAVE &trans
-&kp CAPS    &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans    &trans
-&kp LSHIFT  &trans     &trans        &kp LS(FSLH) &trans     &trans     &trans   &kp LS(SEMI) &trans     &trans     &kp SEMI   &trans    &kp RSHIFT
-&trans      &trans     &trans        &trans       &trans     &trans     &trans   &trans       &trans     &trans     &trans     &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-        };
     };
 };
