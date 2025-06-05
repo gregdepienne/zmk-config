@@ -1,0 +1,258 @@
+Character,Alt Code,Character Name,Unicode Code Point,Character,Alt Code,Character Name,Unicode Code Point
+Alt codes based on IBM/DOS Code Page 437,,,,Alt codes based on Windows Code Page 1252,,,
+␀,Alt 0,Control character - null (NUL),U+0000,␀,Alt 0,Control character - null (NUL),U+0000
+☺,Alt 1,"White smiling face, smiley face",U+263A,␁,Alt 01,Control character - start of heading (SOH),U+0001
+☻,Alt 2,Black smiling face,U+263B,␂,Alt 02,Control character - start of text (STX),U+0002
+♥,Alt 3,Black heart suit,U+2665,␃,Alt 03,Control character - end of text (ETX),U+0003
+♦,Alt 4,Black diamond suit,U+2666,␄,Alt 04,Control character - end of transmission (EOT),U+0004
+♣,Alt 5,Black club suit,U+2663,␅,Alt 05,Control character - enquiry (ENQ),U+0005
+♠,Alt 6,Black spade suit,U+2660,␆,Alt 06,Control character - acknowledge (ACK),U+0006
+•,Alt 7,Bullet,U+2022,␇,Alt 07,Control character - bell (BEL),U+0007
+◘,Alt 8,Inverse bullet,U+25D8,␈,Alt 08,Control character - backspace (BS),U+0008
+○,Alt 9,White circle,U+25CB,␉,Alt 09,Control character - horizontal tabulation (HT),U+0009
+◙,Alt 10,Inverse white circle,U+25D9,␊,Alt 010,Control character - line feed (LF),U+000A
+♂,Alt 11,"Male sign, mars, alchemical symbol for iron",U+2642,␋,Alt 011,Control character - vertical tabulation (VT),U+000B
+♀,Alt 12,"Female sign, venus, alchemical symbol for copper",U+2640,␌,Alt 012,Control character - form feed (FF),U+000C
+♪,Alt 13,"Eighth note, quaver",U+266A,␍,Alt 013,Control character - carriage return (CR),U+000D
+♫,Alt 14,"Beamed eighth notes, barred eighth notes, beamed quavers",U+266B,␎,Alt 014,Control character - shift out (SO),U+000E
+☼,Alt 15,White sun with rays,U+263C,␏,Alt 015,Control character - shift in (SI),U+000F
+►,Alt 16,Black right-pointing pointer,U+25BA,␐,Alt 016,Control character - data link escape (DLE),U+0010
+◄,Alt 17,Black left-pointing pointer,U+25C4,␑,Alt 017,Control character - device control one (DC1),U+0011
+↕,Alt 18,Up down arrow,U+2195,␒,Alt 018,Control character - device control two (DC2),U+0012
+‼,Alt 19,Double exclamation mark,U+203C,␓,Alt 019,Control character - device control three (DC3),U+0013
+¶,Alt 20,"Pilcrow sign, paragraph sign",U+00B6,␔,Alt 020,Control character - device control four (DC4),U+0014
+§,Alt 21,Section sign,U+00A7,␕,Alt 021,Control character - negative acknowledge (NAK),U+0015
+▬,Alt 22,Black rectangle,U+25AC,␖,Alt 022,Control character - synchronous idle (SYN),U+0016
+↨,Alt 23,Up down arrow with base,U+21A8,␗,Alt 023,Control character - end of transmission block (ETB),U+0017
+↑,Alt 24,Upwards arrow,U+2191,␘,Alt 024,Control character - cancel (CAN),U+0018
+↓,Alt 25,Downwards arrow,U+2193,␙,Alt 025,Control character - end of medium (EM),U+0019
+→,Alt 26,"Rightwards arrow, Z notation total function",U+2192,␚,Alt 026,Control character - substitute (SUB),U+001A
+←,Alt 27,Leftwards arrow,U+2190,␛,Alt 027,Control character - escape (ESC),U+001B
+∟,Alt 28,Right angle,U+221F,␜,Alt 028,Control character - file separator (FS),U+001C
+↔,Alt 29,"Left right arrow, Z notation relation",U+2194,␝,Alt 029,Control character - group separator (GS),U+001D
+▲,Alt 30,Black up-pointing triangle,U+25B2,␞,Alt 030,Control character - record separator (RS),U+001E
+▼,Alt 31,Black down-pointing triangle,U+25BC,␟,Alt 031,Control character - unit separator (US),U+001F
+,Alt 32,Space,U+0020,,Alt 032,Space,U+0020
+!,Alt 33,"Exclamation mark, factorial",U+0021,!,Alt 033,"Exclamation mark, factorial",U+0021
+"""",Alt 34,Quotation mark,U+0022,"""",Alt 034,Quotation mark,U+0022
+#,Alt 35,"Number sign, pound sign, hash, crosshatch, octothorpe",U+0023,#,Alt 035,"Number sign, pound sign, hash, crosshatch, octothorpe",U+0023
+$,Alt 36,"Dollar sign, milréis, escudo",U+0024,$,Alt 036,"Dollar sign, milréis, escudo",U+0024
+%,Alt 37,Percent sign,U+0025,%,Alt 037,Percent sign,U+0025
+&,Alt 38,Ampersand,U+0026,&,Alt 038,Ampersand,U+0026
+',Alt 39,Apostrophe,U+0027,',Alt 039,Apostrophe,U+0027
+(,Alt 40,"Left parenthesis, opening parenthesis",U+0028,(,Alt 040,"Left parenthesis, opening parenthesis",U+0028
+),Alt 41,"Right parenthesis, closing parenthesis",U+0029,),Alt 041,"Right parenthesis, closing parenthesis",U+0029
+*,Alt 42,"Asterisk, star",U+002A,*,Alt 042,"Asterisk, star",U+002A
++,Alt 43,Plus sign,U+002B,+,Alt 043,Plus sign,U+002B
+",",Alt 44,"Comma, decimal separator",U+002C,",",Alt 044,"Comma, decimal separator",U+002C
+-,Alt 45,"Hyphen, minus sign",U+002D,-,Alt 045,"Hyphen, minus sign",U+002D
+.,Alt 46,"Full stop, period, dot, decimal point",U+002E,.,Alt 046,"Full stop, period, dot, decimal point",U+002E
+/,Alt 47,"Solidus, slash, forward slash, virgule",U+002F,/,Alt 047,"Solidus, slash, forward slash, virgule",U+002F
+0,Alt 48,Digit zero,U+0030,0,Alt 048,Digit zero,U+0030
+1,Alt 49,Digit one,U+0031,1,Alt 049,Digit one,U+0031
+2,Alt 50,Digit two,U+0032,2,Alt 050,Digit two,U+0032
+3,Alt 51,Digit three,U+0033,3,Alt 051,Digit three,U+0033
+4,Alt 52,Digit four,U+0034,4,Alt 052,Digit four,U+0034
+5,Alt 53,Digit five,U+0035,5,Alt 053,Digit five,U+0035
+6,Alt 54,Digit six,U+0036,6,Alt 054,Digit six,U+0036
+7,Alt 55,Digit seven,U+0037,7,Alt 055,Digit seven,U+0037
+8,Alt 56,Digit eight,U+0038,8,Alt 056,Digit eight,U+0038
+9,Alt 57,Digit nine,U+0039,9,Alt 057,Digit nine,U+0039
+:,Alt 58,Colon,U+003A,:,Alt 058,Colon,U+003A
+;,Alt 59,Semicolon,U+003B,;,Alt 059,Semicolon,U+003B
+<,Alt 60,Less-than sign,U+003C,<,Alt 060,Less-than sign,U+003C
+=,Alt 61,Equals sign,U+003D,=,Alt 061,Equals sign,U+003D
+>,Alt 62,Greater-than sign,U+003E,>,Alt 062,Greater-than sign,U+003E
+?,Alt 63,Question mark,U+003F,?,Alt 063,Question mark,U+003F
+@,Alt 64,"Commercial at, at sign",U+0040,@,Alt 064,"Commercial at, at sign",U+0040
+A,Alt 65,Latin capital letter A,U+0041,A,Alt 065,Latin capital letter A,U+0041
+B,Alt 66,Latin capital letter B,U+0042,B,Alt 066,Latin capital letter B,U+0042
+C,Alt 67,Latin capital letter C,U+0043,C,Alt 067,Latin capital letter C,U+0043
+D,Alt 68,Latin capital letter D,U+0044,D,Alt 068,Latin capital letter D,U+0044
+E,Alt 69,Latin capital letter E,U+0045,E,Alt 069,Latin capital letter E,U+0045
+F,Alt 70,Latin capital letter F,U+0046,F,Alt 070,Latin capital letter F,U+0046
+G,Alt 71,Latin capital letter G,U+0047,G,Alt 071,Latin capital letter G,U+0047
+H,Alt 72,Latin capital letter H,U+0048,H,Alt 072,Latin capital letter H,U+0048
+I,Alt 73,Latin capital letter I,U+0049,I,Alt 073,Latin capital letter I,U+0049
+J,Alt 74,Latin capital letter J,U+004A,J,Alt 074,Latin capital letter J,U+004A
+K,Alt 75,Latin capital letter K,U+004B,K,Alt 075,Latin capital letter K,U+004B
+L,Alt 76,Latin capital letter L,U+004C,L,Alt 076,Latin capital letter L,U+004C
+M,Alt 77,Latin capital letter M,U+004D,M,Alt 077,Latin capital letter M,U+004D
+N,Alt 78,Latin capital letter N,U+004E,N,Alt 078,Latin capital letter N,U+004E
+O,Alt 79,Latin capital letter O,U+004F,O,Alt 079,Latin capital letter O,U+004F
+P,Alt 80,Latin capital letter P,U+0050,P,Alt 080,Latin capital letter P,U+0050
+Q,Alt 81,Latin capital letter Q,U+0051,Q,Alt 081,Latin capital letter Q,U+0051
+R,Alt 82,Latin capital letter R,U+0052,R,Alt 082,Latin capital letter R,U+0052
+S,Alt 83,Latin capital letter S,U+0053,S,Alt 083,Latin capital letter S,U+0053
+T,Alt 84,Latin capital letter T,U+0054,T,Alt 084,Latin capital letter T,U+0054
+U,Alt 85,Latin capital letter U,U+0055,U,Alt 085,Latin capital letter U,U+0055
+V,Alt 86,Latin capital letter V,U+0056,V,Alt 086,Latin capital letter V,U+0056
+W,Alt 87,Latin capital letter W,U+0057,W,Alt 087,Latin capital letter W,U+0057
+X,Alt 88,Latin capital letter X,U+0058,X,Alt 088,Latin capital letter X,U+0058
+Y,Alt 89,Latin capital letter Y,U+0059,Y,Alt 089,Latin capital letter Y,U+0059
+Z,Alt 90,Latin capital letter Z,U+005A,Z,Alt 090,Latin capital letter Z,U+005A
+[,Alt 91,"Left square bracket, opening square bracket",U+005B,[,Alt 091,"Left square bracket, opening square bracket",U+005B
+\,Alt 92,"Reverse Solidus, backslash",U+005C,\,Alt 092,"Reverse Solidus, backslash",U+005C
+],Alt 93,"Right square bracket, closing square bracket",U+005D,],Alt 093,"Right square bracket, closing square bracket",U+005D
+^,Alt 94,Circumflex accent,U+005E,^,Alt 094,Circumflex accent,U+005E
+_,Alt 95,"Low line, underscore",U+005F,_,Alt 095,"Low line, underscore",U+005F
+`,Alt 96,Grave accent,U+0060,`,Alt 096,Grave accent,U+0060
+a,Alt 97,Latin small letter a,U+0061,a,Alt 097,Latin small letter a,U+0061
+b,Alt 98,Latin small letter b,U+0062,b,Alt 098,Latin small letter b,U+0062
+c,Alt 99,Latin small letter c,U+0063,c,Alt 099,Latin small letter c,U+0063
+d,Alt 100,Latin small letter d,U+0064,d,Alt 0100,Latin small letter d,U+0064
+e,Alt 101,Latin small letter e,U+0065,e,Alt 0101,Latin small letter e,U+0065
+f,Alt 102,Latin small letter f,U+0066,f,Alt 0102,Latin small letter f,U+0066
+g,Alt 103,Latin small letter g,U+0067,g,Alt 0103,Latin small letter g,U+0067
+h,Alt 104,Latin small letter h,U+0068,h,Alt 0104,Latin small letter h,U+0068
+i,Alt 105,Latin small letter i,U+0069,i,Alt 0105,Latin small letter i,U+0069
+j,Alt 106,Latin small letter j,U+006A,j,Alt 0106,Latin small letter j,U+006A
+k,Alt 107,Latin small letter k,U+006B,k,Alt 0107,Latin small letter k,U+006B
+l,Alt 108,Latin small letter l,U+006C,l,Alt 0108,Latin small letter l,U+006C
+m,Alt 109,Latin small letter m,U+006D,m,Alt 0109,Latin small letter m,U+006D
+n,Alt 110,Latin small letter n,U+006E,n,Alt 0110,Latin small letter n,U+006E
+o,Alt 111,Latin small letter o,U+006F,o,Alt 0111,Latin small letter o,U+006F
+p,Alt 112,Latin small letter p,U+0070,p,Alt 0112,Latin small letter p,U+0070
+q,Alt 113,Latin small letter q,U+0071,q,Alt 0113,Latin small letter q,U+0071
+r,Alt 114,Latin small letter r,U+0072,r,Alt 0114,Latin small letter r,U+0072
+s,Alt 115,Latin small letter s,U+0073,s,Alt 0115,Latin small letter s,U+0073
+t,Alt 116,Latin small letter t,U+0074,t,Alt 0116,Latin small letter t,U+0074
+u,Alt 117,Latin small letter u,U+0075,u,Alt 0117,Latin small letter u,U+0075
+v,Alt 118,Latin small letter v,U+0076,v,Alt 0118,Latin small letter v,U+0076
+w,Alt 119,Latin small letter w,U+0077,w,Alt 0119,Latin small letter w,U+0077
+x,Alt 120,Latin small letter x,U+0078,x,Alt 0120,Latin small letter x,U+0078
+y,Alt 121,Latin small letter y,U+0079,y,Alt 0121,Latin small letter y,U+0079
+z,Alt 122,Latin small letter z,U+007A,z,Alt 0122,Latin small letter z,U+007A
+{,Alt 123,"Left curly bracket, opening curly bracket, left brace",U+007B,{,Alt 0123,"Left curly bracket, opening curly bracket, left brace",U+007B
+|,Alt 124,"Vertical line, vertical bar",U+007C,|,Alt 0124,"Vertical line, vertical bar",U+007C
+},Alt 125,"Right curly bracket, closing curly bracket, right brace",U+007D,},Alt 0125,"Right curly bracket, closing curly bracket, right brace",U+007D
+~,Alt 126,Tilde,U+007E,~,Alt 0126,Tilde,U+007E
+⌂,Alt 127,House,U+2302,␡,Alt 0127,Control character - delete (DEL),U+007F
+Ç,Alt 128,Latin capital letter C with cedilla,U+00C7,€,Alt 0128,Euro sign,U+20AC
+ü,Alt 129,Latin small letter u with diaeresis,U+00FC,␦,Alt 0129,Control character - high octet preset (HOP),U+0081
+é,Alt 130,Latin small letter e with acute,U+00E9,‚,Alt 0130,Single low-9 quotation mark,U+201A
+â,Alt 131,Latin small letter a with circumflex,U+00E2,ƒ,Alt 0131,"Latin small letter f with hook, florin currency symbol, function symbol",U+0192
+ä,Alt 132,Latin small letter a with diaeresis,U+00E4,„,Alt 0132,Double low-9 quotation mark,U+201E
+à,Alt 133,Latin small letter a with grave,U+00E0,…,Alt 0133,"Horizontal ellipsis, three dot leader",U+2026
+å,Alt 134,Latin small letter a with ring above,U+00E5,†,Alt 0134,"Dagger, obelisk, cross",U+2020
+ç,Alt 135,Latin small letter c with cedilla,U+00E7,‡,Alt 0135,"Double dagger, double obelisk, diesis",U+2021
+ê,Alt 136,Latin small letter e with circumflex,U+00EA,ˆ,Alt 0136,Modifier Letter Circumflex Accent,U+02C6
+ë,Alt 137,Latin small letter e with diaeresis,U+00EB,‰,Alt 0137,"Per mille sign, per thousand",U+2030
+è,Alt 138,Latin small letter e with grave,U+00E8,Š,Alt 0138,"Latin capital letter S with caron, S hacek",U+0160
+ï,Alt 139,Latin small letter i with diaeresis,U+00EF,‹,Alt 0139,"Single left-pointing angle quotation mark, left guillemet",U+2039
+î,Alt 140,Latin small letter i with circumflex,U+00EE,Œ,Alt 0140,Latin capital ligature OE,U+0152
+ì,Alt 141,Latin small letter i with grave,U+00EC,␦,Alt 0141,Control character - reverse line feed (RI),U+008D
+Ä,Alt 142,Latin capital letter A with diaeresis,U+00C4,Ž,Alt 0142,"Latin capital letter Z with caron, Z hacek",U+017D
+Å,Alt 143,Latin capital letter A with ring above,U+00C5,␦,Alt 0143,Control character - single shift three (SS3),U+008F
+É,Alt 144,Latin capital letter E with acute,U+00C9,␦,Alt 0144,Control character - device control string (DCS),U+0090
+æ,Alt 145,"Latin small letter ae, ash (from Old English æsc)",U+00E6,‘,Alt 0145,Left single quotation mark,U+2018
+Æ,Alt 146,Latin capital letter AE,U+00C6,’,Alt 0146,Right single quotation mark,U+2019
+ô,Alt 147,Latin small letter o with circumflex,U+00F4,“,Alt 0147,Left double quotation mark,U+201C
+ö,Alt 148,Latin small letter o with diaeresis,U+00F6,”,Alt 0148,Right double quotation mark,U+201D
+ò,Alt 149,Latin small letter o with grave,U+00F2,•,Alt 0149,Bullet,U+2022
+û,Alt 150,Latin small letter u with circumflex,U+00FB,–,Alt 0150,En dash,U+2013
+ù,Alt 151,Latin small letter u with grave,U+00F9,—,Alt 0151,Em dash,U+2014
+ÿ,Alt 152,Latin small letter y with diaeresis,U+00FF,˜,Alt 0152,Small tilde,U+02DC
+Ö,Alt 153,Latin capital letter O with diaeresis,U+00D6,™,Alt 0153,Trade mark sign,U+2122
+Ü,Alt 154,Latin capital letter U with diaeresis,U+00DC,š,Alt 0154,"Latin small letter s with caron, s hacek",U+0161
+¢,Alt 155,Cent sign,U+00A2,›,Alt 0155,"Single right-pointing angle quotation mark, right guillemet",U+203A
+£,Alt 156,"Pound sign, pound sterling, Irish punt, lira sign",U+00A3,œ,Alt 0156,Latin small ligature oe,U+0153
+¥,Alt 157,"Yen sign, yuan sign",U+00A5,␦,Alt 0157,Control character - operating system command (OSC),U+009D
+₧,Alt 158,Peseta sign,U+20A7,ž,Alt 0158,"Latin small letter z with caron, z hacek",U+017E
+ƒ,Alt 159,"Latin small letter f with hook, florin currency symbol, function symbol",U+0192,Ÿ,Alt 0159,Latin capital letter Y with diaeresis,U+0178
+á,Alt 160,Latin small letter a with acute,U+00E1,,Alt 0160,"No-break space, non-breaking space, nbsp",U+00A0
+í,Alt 161,Latin small letter i with acute,U+00ED,¡,Alt 0161,Inverted exclamation mark,U+00A1
+ó,Alt 162,Latin small letter o with acute,U+00F3,¢,Alt 0162,Cent sign,U+00A2
+ú,Alt 163,Latin small letter u with acute,U+00FA,£,Alt 0163,"Pound sign, pound sterling, Irish punt, lira sign",U+00A3
+ñ,Alt 164,"Latin small letter n with tilde, small letter enye",U+00F1,¤,Alt 0164,Currency sign,U+00A4
+Ñ,Alt 165,"Latin capital letter N with tilde, capital letter enye",U+00D1,¥,Alt 0165,"Yen sign, yuan sign",U+00A5
+ª,Alt 166,Feminine ordinal indicator,U+00AA,¦,Alt 0166,"Broken bar, parted rule (in typography)",U+00A6
+º,Alt 167,Masculine ordinal indicator,U+00BA,§,Alt 0167,Section sign,U+00A7
+¿,Alt 168,"Inverted question mark, turned question mark",U+00BF,¨,Alt 0168,Diaeresis,U+00A8
+⌐,Alt 169,"Reversed not sign, beginning of line",U+2310,©,Alt 0169,Copyright sign,U+00A9
+¬,Alt 170,"Not sign, angled dash",U+00AC,ª,Alt 0170,Feminine ordinal indicator,U+00AA
+½,Alt 171,Vulgar fraction one half,U+00BD,«,Alt 0171,"Left-pointing double angle quotation mark, left guillemet, chevrons (in typography)",U+00AB
+¼,Alt 172,Vulgar fraction one quarter,U+00BC,¬,Alt 0172,"Not sign, angled dash",U+00AC
+¡,Alt 173,Inverted exclamation mark,U+00A1,­,Alt 0173,"Soft hyphen, discretionary hyphen",U+00AD
+«,Alt 174,"Left-pointing double angle quotation mark, left guillemet, chevrons (in typography)",U+00AB,®,Alt 0174,Registered sign,U+00AE
+»,Alt 175,"Right-pointing double angle quotation mark, right guillemet",U+00BB,¯,Alt 0175,"Macron, overline, overbar",U+00AF
+░,Alt 176,Light shade,U+2591,°,Alt 0176,Degree sign,U+00B0
+▒,Alt 177,"Medium shade, speckles fill, dotted fill",U+2592,±,Alt 0177,Plus-minus sign,U+00B1
+▓,Alt 178,Dark shade,U+2593,²,Alt 0178,"Superscript two, squared",U+00B2
+│,Alt 179,Box drawings light vertical,U+2502,³,Alt 0179,"Superscript three, cubed",U+00B3
+┤,Alt 180,Box drawings light vertical and left,U+2524,´,Alt 0180,Acute accent,U+00B4
+╡,Alt 181,Box drawings vertical single and left double,U+2561,µ,Alt 0181,Micro sign,U+00B5
+╢,Alt 182,Box drawings vertical double and left single,U+2562,¶,Alt 0182,"Pilcrow sign, paragraph sign",U+00B6
+╖,Alt 183,Box drawings down double and left single,U+2556,·,Alt 0183,"Middle dot, midpoint (in typography), Georgian comma, Greek ano teleia",U+00B7
+╕,Alt 184,Box drawings down single and left double,U+2555,¸,Alt 0184,Cedilla,U+00B8
+╣,Alt 185,Box drawings double vertical and left,U+2563,¹,Alt 0185,Superscript one,U+00B9
+║,Alt 186,Box drawings double vertical,U+2551,º,Alt 0186,Masculine ordinal indicator,U+00BA
+╗,Alt 187,Box drawings double down and left,U+2557,»,Alt 0187,"Right-pointing double angle quotation mark, right guillemet",U+00BB
+╝,Alt 188,Box drawings double up and left,U+255D,¼,Alt 0188,Vulgar fraction one quarter,U+00BC
+╜,Alt 189,Box drawings up double and left single,U+255C,½,Alt 0189,Vulgar fraction one half,U+00BD
+╛,Alt 190,Box drawings up single and left double,U+255B,¾,Alt 0190,Vulgar fraction three quarters,U+00BE
+┐,Alt 191,Box drawings light down and left,U+2510,¿,Alt 0191,"Inverted question mark, turned question mark",U+00BF
+└,Alt 192,Box drawings light up and right,U+2514,À,Alt 0192,Latin capital letter A with grave,U+00C0
+┴,Alt 193,Box drawings light up and horizontal,U+2534,Á,Alt 0193,Latin capital letter A with acute,U+00C1
+┬,Alt 194,Box drawings light down and horizontal,U+252C,Â,Alt 0194,Latin capital letter A with circumflex,U+00C2
+├,Alt 195,Box drawings light vertical and right,U+251C,Ã,Alt 0195,Latin capital letter A with tilde,U+00C3
+─,Alt 196,Box drawings light horizontal,U+2500,Ä,Alt 0196,Latin capital letter A with diaeresis,U+00C4
+┼,Alt 197,Box drawings light vertical and horizontal,U+253C,Å,Alt 0197,Latin capital letter A with ring above,U+00C5
+╞,Alt 198,Box drawings vertical single and right double,U+255E,Æ,Alt 0198,Latin capital letter AE,U+00C6
+╟,Alt 199,Box drawings vertical double and right single,U+255F,Ç,Alt 0199,Latin capital letter C with cedilla,U+00C7
+╚,Alt 200,Box drawings double up and right,U+255A,È,Alt 0200,Latin capital letter E with grave,U+00C8
+╔,Alt 201,Box drawings double down and right,U+2554,É,Alt 0201,Latin capital letter E with acute,U+00C9
+╩,Alt 202,Box drawings double up and horizontal,U+2569,Ê,Alt 0202,Latin capital letter E with circumflex,U+00CA
+╦,Alt 203,Box drawings double down and horizontal,U+2566,Ë,Alt 0203,Latin capital letter E with diaeresis,U+00CB
+╠,Alt 204,Box drawings double vertical and right,U+2560,Ì,Alt 0204,Latin capital letter I with grave,U+00CC
+═,Alt 205,Box drawings double horizontal,U+2550,Í,Alt 0205,Latin capital letter I with acute,U+00CD
+╬,Alt 206,Box drawings double vertical and horizontal,U+256C,Î,Alt 0206,Latin capital letter I with circumflex,U+00CE
+╧,Alt 207,Box drawings up single and horizontal double,U+2567,Ï,Alt 0207,Latin capital letter I with diaeresis,U+00CF
+╨,Alt 208,Box drawings up double and horizontal single,U+2568,Ð,Alt 0208,Latin capital letter eth,U+00D0
+╤,Alt 209,Box drawings down single and horizontal double,U+2564,Ñ,Alt 0209,"Latin capital letter N with tilde, capital letter enye",U+00D1
+╥,Alt 210,Box drawings down double and horizontal single,U+2565,Ò,Alt 0210,Latin capital letter O with grave,U+00D2
+╙,Alt 211,Box drawings up double and right single,U+2559,Ó,Alt 0211,Latin capital letter O with acute,U+00D3
+╘,Alt 212,Box drawings up single and right double,U+2558,Ô,Alt 0212,Latin capital letter O with circumflex,U+00D4
+╒,Alt 213,Box drawings down single and right double,U+2552,Õ,Alt 0213,Latin capital letter O with tilde,U+00D5
+╓,Alt 214,Box drawings down double and right single,U+2553,Ö,Alt 0214,Latin capital letter O with diaeresis,U+00D6
+╫,Alt 215,Box drawings vertical double and horizontal single,U+256B,×,Alt 0215,"Multiplication sign, z notation cartesian product",U+00D7
+╪,Alt 216,Box drawings vertical single and horizontal double,U+256A,Ø,Alt 0216,Latin capital letter O with stroke,U+00D8
+┘,Alt 217,Box drawings light up and left,U+2518,Ù,Alt 0217,Latin capital letter U with grave,U+00D9
+┌,Alt 218,Box drawings light down and right,U+250C,Ú,Alt 0218,Latin capital letter U with acute,U+00DA
+█,Alt 219,"Full block, solid block",U+2588,Û,Alt 0219,Latin capital letter U with circumflex,U+00DB
+▄,Alt 220,Lower half block,U+2584,Ü,Alt 0220,Latin capital letter U with diaeresis,U+00DC
+▌,Alt 221,Left half block,U+258C,Ý,Alt 0221,Latin capital letter Y with acute,U+00DD
+▐,Alt 222,Right half block,U+2590,Þ,Alt 0222,Latin capital letter thorn,U+00DE
+▀,Alt 223,Upper half block,U+2580,ß,Alt 0223,"Latin small letter sharp s, eszett",U+00DF
+α,Alt 224,Greek small letter alpha,U+03B1,à,Alt 0224,Latin small letter a with grave,U+00E0
+ß,Alt 225,"Latin small letter sharp s, eszett",U+00DF,á,Alt 0225,Latin small letter a with acute,U+00E1
+Γ,Alt 226,Greek capital letter gamma,U+0393,â,Alt 0226,Latin small letter a with circumflex,U+00E2
+π,Alt 227,Greek small letter pi,U+03C0,ã,Alt 0227,Latin small letter a with tilde,U+00E3
+Σ,Alt 228,Greek capital letter sigma,U+03A3,ä,Alt 0228,Latin small letter a with diaeresis,U+00E4
+σ,Alt 229,Greek small letter sigma,U+03C3,å,Alt 0229,Latin small letter a with ring above,U+00E5
+µ,Alt 230,Micro sign,U+00B5,æ,Alt 0230,"Latin small letter ae, ash (from Old English æsc)",U+00E6
+τ,Alt 231,Greek capital letter tau,U+03A4,ç,Alt 0231,Latin small letter c with cedilla,U+00E7
+Φ,Alt 232,Greek capital letter phi,U+03A6,è,Alt 0232,Latin small letter e with grave,U+00E8
+Θ,Alt 233,Greek capital letter theta,U+0398,é,Alt 0233,Latin small letter e with acute,U+00E9
+Ω,Alt 234,Greek capital letter omega,U+03A9,ê,Alt 0234,Latin small letter e with circumflex,U+00EA
+δ,Alt 235,Greek small letter delta,U+03B4,ë,Alt 0235,Latin small letter e with diaeresis,U+00EB
+∞,Alt 236,Infinity,U+221E,ì,Alt 0236,Latin small letter i with grave,U+00EC
+φ,Alt 237,Greek small letter phi,U+03C6,í,Alt 0237,Latin small letter i with acute,U+00ED
+ε,Alt 238,Greek small letter epsilon,U+03B5,î,Alt 0238,Latin small letter i with circumflex,U+00EE
+∩,Alt 239,Intersection,U+2229,ï,Alt 0239,Latin small letter i with diaeresis,U+00EF
+≡,Alt 240,Identical to,U+2261,ð,Alt 0240,Latin small letter eth,U+00F0
+±,Alt 241,Plus-minus sign,U+00B1,ñ,Alt 0241,"Latin small letter n with tilde, small letter enye",U+00F1
+≥,Alt 242,Greater-than or equal to,U+2265,ò,Alt 0242,Latin small letter o with grave,U+00F2
+≤,Alt 243,Less-than or equal to,U+2264,ó,Alt 0243,Latin small letter o with acute,U+00F3
+⌠,Alt 244,Top half integral,U+2320,ô,Alt 0244,Latin small letter o with circumflex,U+00F4
+⌡,Alt 245,Bottom half integral,U+2321,õ,Alt 0245,Latin small letter o with tilde,U+00F5
+÷,Alt 246,"Division sign, obelus",U+00F7,ö,Alt 0246,Latin small letter o with diaeresis,U+00F6
+≈,Alt 247,"Almost equal to, asymptotic to",U+2248,÷,Alt 0247,"Division sign, obelus",U+00F7
+°,Alt 248,Degree sign,U+00B0,ø,Alt 0248,Latin small letter o with stroke,U+00F8
+∙,Alt 249,Bullet operator,U+2219,ù,Alt 0249,Latin small letter u with grave,U+00F9
+·,Alt 250,"Middle dot, midpoint (in typography), interpunct, Georgian comma, Greek ano teleia",U+00B7,ú,Alt 0250,Latin small letter u with acute,U+00FA
+√,Alt 251,"Square root, radical sign",U+221A,û,Alt 0251,Latin small letter u with circumflex,U+00FB
+ⁿ,Alt 252,Superscript Latin small letter n,U+207F,ü,Alt 0252,Latin small letter u with diaeresis,U+00FC
+²,Alt 253,"Superscript two, squared",U+00B2,ý,Alt 0253,Latin small letter y with acute,U+00FD
+■,Alt 254,Black square,U+25A0,þ,Alt 0254,Latin small letter thorn,U+00FE
+,Alt 255,"No-break space, non-breaking space, nbsp",U+00A0,ÿ,Alt 0255,Latin small letter y with diaeresis,U+00FF
