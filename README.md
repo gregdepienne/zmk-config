@@ -19,3 +19,10 @@ Pour ne saisir qu'un symbole, pressez sa touche suivie de la touche espace. Pour
 
 
 https://miamioh.edu/cas/centers-institutes/interactive-language-resource-center/tech-support/
+
+
+    Accent aigu (é) : Alt + 0233
+    Accent grave (à) : Alt + 0224
+    Accent circonflexe (ê) : Alt + 0234
+    Tréma (ë) : Alt + 0235
+    Cédille (ç) : Alt + 0231

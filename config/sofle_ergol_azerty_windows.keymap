@@ -627,15 +627,92 @@
         ///////////
 
         // TAB
+        // TRANS
+        // TRANS ?
+        // TRANS ?
 
-        // Q : A
-        // â : LBKT A
-        // Â : LBKT LS(A)
+        ////// Normal et Shift //////
+        // Q : QWERTY : Q
+        // Q : AZERTY : A
+        ////// 1DK //////
+        // â : QWERTY : CARET A
+        macro_a_circ_qwerty: macro_a_circ_qwerty {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LS(N6) &kp A>
+                ;
+        };
+        // â : AZERTY : LBKT Q
+        macro_a_circ_azerty: macro_a_circ_azerty {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LBKT &kp Q>
+                ;
+        };
+        ////// 1DK Shift //////
+        // Â : QWERTY : CARET LS(A)
+        macro_cap_a_circ_qwerty: macro_cap_a_circ_qwerty {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LS(N6) &kp LS(A)>
+                ;
+        };
+        // Â : AZERTY : LBKT LS(Q)
+        macro_cap_a_circ_azerty: macro_cap_a_circ_azerty {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LBKT &kp LS(Q)>
+                ;
+        };
+        ////// Symboles //////
+        // ^ : QWERTY : LS(N6) SPACE
+        macro_caret_qwerty: macro_caret_qwerty {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LS(N6) &kp SPACE>
+                ;
+        };
+        // ^ : AZERTY : LBKT SPACE
+        macro_caret_azerty: macro_caret_azerty {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LBKT &kp SPACE>
+                ;
+        };
+        ////// Symboles Shift //////
+        // ^ (MODIFIER) : QWERTY : LS(N6) 
+        // ^ (MODIFIER) : AZERTY : LBKT 
 
-        // C : C 
-        // ç : N9
-        // Ç : U+00C7 : LATIN CAPITAL LETTER C WITH CEDILLA
-        macro_c_c_cedi: macro_cap_c_cedille {
+
+        ////// Normal et Shift //////
+        // C : QWERTY, AZERTY : C
+        ////// 1DK //////
+        // ç : QUERTY : SQT C
+        macro_c_cedi_qwerty: macro_c_cedille_qwerty {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp SQT &kp C>
+                ;
+        };
+        // ç : AZERTY : N9
+        ////// 1DK Shift //////
+        // Ç : QUERTY : SQT LS(C)
+        macro_cap_c_cedi_qwerty: macro_cap_c_cedille_qwerty {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp SQT &kp LS(C)>
+                ;
+        };
+        // Ç : AZERTY : U+00C7 : LATIN CAPITAL LETTER C WITH CEDILLA
+        macro_cap_c_cedi_azerty: macro_cap_c_cedille_azerty {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -644,8 +721,8 @@
                 , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
-        // Ç : Alt(0199) : LATIN CAPITAL LETTER C WITH CEDILLA
-        macro_c_c_cedi_win: macro_cap_c_cedille_win {
+        // Ç : AZERTY : Alt(0199) : LATIN CAPITAL LETTER C WITH CEDILLA
+        macro_cap_c_cedi_azerty_win: macro_cap_c_cedille_azerty_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -654,9 +731,27 @@
                 , <&macro_release &kp L_ALT>
                 ;
         };
+        ////// Symboles //////
+        // < : QUERTY : LESS_THAN
+        // < : AZERTY : BSLH
+        ////// Symboles Shift //////
+        // ≤ : QUERTY, AZERTY : U+2264 : LESS-THAN OR EQUAL TO
+        macro_less_eq_to: macro_less_equal_to {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N2 &kp N2 &kp N6 &kp N4 &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        };
+        // ≤ : NO macro_less_eq_to_win : NONE
 
-        // O : O
-        // œ : U+0153 : LATIN SMALL LIGATURE OE {ethel (from Old English eðel)}
+
+        ////// Normal et Shift //////
+        // O : QWERTY, AZERTY : O
+        ////// 1DK //////
+        // œ : QWERTY, AZERTY : U+0153 : LATIN SMALL LIGATURE OE {ethel (from Old English eðel)}
         macro_o_e: macro_o_e {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -666,7 +761,7 @@
                 , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
-        // œ : Alt(0156) : LATIN SMALL LIGATURE OE {ethel (from Old English eðel)}
+        // œ : QWERTY, AZERTY : Alt(0156) : LATIN SMALL LIGATURE OE {ethel (from Old English eðel)}
         macro_o_e_win: macro_o_e_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -676,8 +771,9 @@
                 , <&macro_release &kp L_ALT>
                 ;
         };
-        // Œ : U+0152 : LATIN CAPITAL LIGATURE OE
-        macro_c_o_e: macro_cap_o_e {
+        ////// 1DK Shift //////
+        // Œ : QWERTY, AZERTY : U+0152 : LATIN CAPITAL LIGATURE OE
+        macro_cap_o_e: macro_cap_o_e {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -686,8 +782,8 @@
                 , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
-        // Œ : Alt(0140) : LATIN CAPITAL LIGATURE OE
-        macro_c_o_e_win: macro_cap_o_e_win {
+        // Œ : QWERTY, AZERTY : Alt(0140) : LATIN CAPITAL LIGATURE OE
+        macro_cap_o_e_win: macro_cap_o_e_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -696,31 +792,231 @@
                 , <&macro_release &kp L_ALT>
                 ;
         };
+        ////// Symboles //////
+        // > : QUERTY : GREATER_THAN
+        // > : AZERTY : PIPE
+        ////// Symboles Shift //////
+        // ≥ : QWERTY, AZERTY : U+2265 : GREATER-THAN OR EQUAL TO
+        macro_great_eq_to: macro_greater_equal_to {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N2 &kp N2 &kp N6 &kp N5 &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        };
+        // ≥ : NO macro_great_eq_to_win : NONE
 
-        // P : P 
-        // ô : LBKT O
-        // Ô : LBKT LS(O)
 
-        // W : Z 
-        
-        // J : J
-        
-        // M : SEMI
-        // µ : BSLH
+        ////// Normal et Shift //////
+        // P : QWERTY, AZERTY : P
+        ////// 1DK //////
+        // ô : QWERTY : CARET O
+        macro_o_circ_qwerty: macro_o_circonflexe_qwerty {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp CARET &kp O>
+                ;
+        };
+        // ô : AZERTY : LBKT O
+        macro_o_circ_azerty: macro_o_circonflexe_azerty {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LBKT &kp O>
+                ;
+        };
+        ////// 1DK Shift //////
+        // Ô : QWERTY : CARET LS(O)
+        macro_cap_o_circ_qwerty: macro_cap_o_circonflexe_qwerty {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp CARET &kp O>
+                ;
+        };
+        // Ô : AZERTY : LBKT LS(O)
+        macro_cap_o_circ_azerty: macro_cap_o_circonflexe_azerty {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LBKT &kp O>
+                ;
+        };
+        ////// Symboles //////
+        // $ : QWERTY : DOLLAR
+        // $ : AZERTY : RBKT
+        ////// Symboles Shift //////
+        // ¤ : TODO CURRENCY LAYER TOGGLE : NONE
 
-        // D : D
-        // _ : UNDERSCORE
 
-        // 1DK : sticky layer
-        // 2DK : sticky layer // " : LS(LBKT)
-        // ! : N8
-        
+        ////// Normal et Shift //////
+        // W : QWERTY : W
+        // W : AZERTY : Z
+        ////// 1DK //////
+        // NONE
+        ////// 1DK Shift //////
+        // NONE
+        ////// Symboles //////
+        // % : QWERTY : PERCENT
+        // % : AZERTY : LS(SQT)
+        ////// Symboles Shift //////
+        // ‰ : QWERTY, AZERTY : U+2030 : PER MILLE SIGN {permille, per thousand}
+        macro_per_mil: macro_per_mille {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N2 &kp N0 &kp N3 &kp N0 &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        };
+        // ‰ : QWERTY, AZERTY : Alt(0137) : PER MILLE SIGN {permille, per thousand}
+        macro_per_mil_win: macro_per_mille_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N1 &kp N3 &kp N7>
+                , <&macro_release &kp L_ALT>
+                ;
+        };
+
+        ////// Normal et Shift //////
+        // J : QWERTY, AZERTY : J
+        ////// 1DK //////
+        // NONE
+        ////// 1DK Shift //////
+        // NONE
+        ////// Symboles //////
+        // @ : QWERTY : AT
+        // @ : AZERTY : RA(N2)
+        ////// Symboles Shift //////
+        // ° : TODO ACCENT ROND LAYER TOG 
+
+        ////// Normal et Shift //////
+        // M : QWERTY : M
+        // M : AZERTY : SEMI
+        ////// 1DK //////
+        // µ : QWERTY, AZERTY : U+00B5 : MICRO SIGN
+        macro_micro: macro_micro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp B &kp N5 &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        };
+        // µ : QWERTY, AZERTY : Alt(0230) : MICRO SIGN
+        macro_micro_win: macro_micro_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N2 &kp N3 &kp N0>
+                , <&macro_release &kp L_ALT>
+                ;
+        };       
+        ////// 1DK Shift //////
+        // NONE
+        ////// Symboles //////
+        // & : QWERTY : AMPS
+        // & : AZERTY : N1
+        ////// Symboles Shift //////
+        // NONE
+
+        ////// Normal et Shift //////
+        // D : QWERTY, AZERTY : D
+        ////// 1DK //////
+        // _ : QWERTY : UNDERSCORE
+        // _ : AZERTY : N8
+        ////// 1DK Shift //////
+        // _ : QWERTY : UNDERSCORE
+        // _ : AZERTY : N8
+        ////// Symboles //////
+        // * : QUERTY : STAR
+        // * : AZERTY : PIPE
+        ////// Symboles Shift //////
+        // × : QWERTY, AZERTY : U+00D7 : MULTIPLICATION SIGN {z notation Cartesian product}
+        macro_multiply: macro_multiply {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp D &kp N7 &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        };
+        // × : QWERTY, AZERTY : Alt(0215) : MULTIPLICATION SIGN {z notation Cartesian product}
+        macro_multiply_win: macro_multiply_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N2 &kp N1 &kp N5>
+                , <&macro_release &kp L_ALT>
+                ;
+        };
+
+        ////// Normal //////
+        // 1DK : sticky layer 1DK
+        ////// Shift //////
+        // ! : QWERTY : EXCL
+        // ! : AZERTY : N8
+        ////// 1DK //////
+        // 2DK : " : QUERTY : DQT
+        // 2DK : " : AZERTY : LBRC
+        ////// 1DK Shift //////
+        // ¡ : QUERTY, AZERTY : U+00A1 : INVERTED EXCLAMATION MARK
+        macro_inv_excl: macro_inv_excl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp A &kp N1 &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        // ¡ : QUERTY, AZERTY : Alt(173) : INVERTED EXCLAMATION MARK
+        macro_inv_excl_win: macro_inv_excl_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N1 &kp N7 &kp N3>
+                , <&macro_release &kp L_ALT>
+                ;
+        };
+        ////// Symboles //////
+        // ' : QUERTY : SQT SPACE
+        // ' : AZERTY : N4
+        ////// Symboles Shift //////
+        // ' MODIFIER ACUTE : QUERTY :: SQT
+        // ' MODIFIER ACUTE : AZERTY : TODO MODIFIER ACUTE : NONE 
+
+
+
+
+
+
+
+
+
 
         // Y : Y
         // û : LBKT U
         // Û : LBKT LS(U)
-        
-        
+        // ` : macro_grave
+        // ` : RA(BSLH)
+
+        // BACKSPACE
+        // TOGGLE 1DK
+        // TOGGLE 2DK
+        // TRANS
+        // TRANS
+
         ///////////
         // Rangée 3
         ///////////
@@ -1134,153 +1430,15 @@
 
         // R_GUI
 
-        ///////////
-        // Symboles
-        // Rangée 1
-        ///////////
 
 
 
 
 
-        ///////////
-        // Symboles
-        // Rangée 2
-        ///////////
 
-        // TRANS // TAB
 
-        // Q : QWERTY : Q
-        // Q : AZERTY : Q
-        // Â : QWERTY
-        // Â : AZERTY : 
-        // ^ : LBKT SPACE
-        // ^ : MODIFIER : LBKT 
 
-        // < : U+003C : LESS-THAN SIGN
-        macro_less_than: macro_less_than {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp L_CTL &kp L_SHIFT>
-                , <&macro_tap &kp U &kp N0 &kp N0 &kp N3 &kp C &kp SPACE>
-                , <&macro_release &kp L_CTL &kp L_SHIFT>
-                ;
-        };
-        // < : Alt(060) : LESS-THAN SIGN
-        macro_less_than_win: macro_less_than_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp L_ALT>
-                , <&macro_tap &kp N0 &kp N6 &kp N0>
-                , <&macro_release &kp L_ALT>
-                ;
-        };
-        // ≤ : U+2264 : LESS-THAN OR EQUAL TO
-        macro_less_eq_to: macro_less_equal_to {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp L_CTL &kp L_SHIFT>
-                , <&macro_tap &kp U &kp N2 &kp N2 &kp N6 &kp N4 &kp SPACE>
-                , <&macro_release &kp L_CTL &kp L_SHIFT>
-                ;
-        };
-        // ≤ : NO macro_less_eq_to_win 
 
-        // > : U+003E : GREATER-THAN SIGN
-        macro_great_than: macro_greater_than {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp L_CTL &kp L_SHIFT>
-                , <&macro_tap &kp U &kp N0 &kp N0 &kp N3 &kp E &kp SPACE>
-                , <&macro_release &kp L_CTL &kp L_SHIFT>
-                ;
-        };
-        // > : Alt(062) : GREATER-THAN SIGN
-        macro_great_than_win: macro_greater_than_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp L_ALT>
-                , <&macro_tap &kp N0 &kp N6 &kp N2>
-                , <&macro_release &kp L_ALT>
-                ;
-        };
-        // ≥ : U+2265 : GREATER-THAN OR EQUAL TO
-        macro_great_eq_to: macro_greater_equal_to {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp L_CTL &kp L_SHIFT>
-                , <&macro_tap &kp U &kp N2 &kp N2 &kp N6 &kp N5 &kp SPACE>
-                , <&macro_release &kp L_CTL &kp L_SHIFT>
-                ;
-        };
-        // ≥ : NO macro_great_eq_to_win 
-
-        // $ : U+0024 : DOLLAR SIGN {milréis, escudo} : RBKT
-        // ¤ : TODO CURRENCY LAYER TOG
-
-        // % : U+0025 : PERCENT SIGN : LS(SQT)
-        // ‰ : U+2030 : PER MILLE SIGN {permille, per thousand}
-        macro_per_mil: macro_per_mille {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp L_CTL &kp L_SHIFT>
-                , <&macro_tap &kp U &kp N2 &kp N0 &kp N3 &kp N0 &kp SPACE>
-                , <&macro_release &kp L_CTL &kp L_SHIFT>
-                ;
-        };
-        // ‰ : Alt(0137) : PER MILLE SIGN {permille, per thousand}
-        macro_per_mil_win: macro_per_mille_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp L_ALT>
-                , <&macro_tap &kp N0 &kp N1 &kp N3 &kp N7>
-                , <&macro_release &kp L_ALT>
-                ;
-        };
-
-        // @ : RA(N2)
-        // ° : TODO ACCENT ROND LAYER TOG 
-
-        // & : N1
-        // NONE
-
-        // * : LS(RBKT)
-        // × : U+00D7 : MULTIPLICATION SIGN {z notation Cartesian product}
-        macro_multiply: macro_multiply {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp L_CTL &kp L_SHIFT>
-                , <&macro_tap &kp U &kp N0 &kp N0 &kp D &kp N7 &kp SPACE>
-                , <&macro_release &kp L_CTL &kp L_SHIFT>
-                ;
-        };
-        // × : Alt(0215) : MULTIPLICATION SIGN {z notation Cartesian product}
-        macro_multiply_win: macro_multiply_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp L_ALT>
-                , <&macro_tap &kp N0 &kp N2 &kp N1 &kp N5>
-                , <&macro_release &kp L_ALT>
-                ;
-        };
-
-        // ' : N4
-        // ' : RA(SQT)
-
-        // ` : macro_grave
-        // ` : RA(BSLH)
-
-        // TRANS
 
         ///////////
         // Symboles
