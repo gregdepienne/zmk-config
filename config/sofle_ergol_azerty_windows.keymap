@@ -499,7 +499,7 @@
         // 9 : QWERTY : N9
         // 9 : AZERTY : LS(N9)
         ////// Shift //////
-        // # : QWERTY : LS(N9)
+        // # : QWERTY : LS(N3)
         // # : AZERTY : RA(N3)
         ////// 1DK //////
         // ¶ : QWERTY, AZERTY : U+00B6 : Alt(0182) : PILCROW SIGN {paragraph sign}
@@ -553,7 +553,7 @@
         // 0 : QWERTY : N0
         // 0 : AZERTY : LS(N0)
         ////// Shift //////
-        // @ : QWERTY : LS(N0)
+        // @ : QWERTY : LS(N2)
         // @ : AZERTY : RA(Q)
         ////// 1DK //////
         // ° : QWERTY : U+00B0 : Alt(0176) : DEGREE SIGN
@@ -610,10 +610,10 @@
         // TRANS
         // TRANS
 
-        
-        ///////////
-        // Rangée 2
-        ///////////
+ 
+        /////////////////////////////////////////////////////////////////////////////
+        // Rangée 2                                                                //
+        /////////////////////////////////////////////////////////////////////////////
 
         // TAB
         // TRANS
@@ -1077,9 +1077,9 @@
         // TRANS
 
 
-        ///////////
-        // Rangée 3
-        ///////////
+        /////////////////////////////////////////////////////////////////////////////
+        // Rangée 3                                                                //
+        /////////////////////////////////////////////////////////////////////////////
 
         // CAPS
         // TRANS
@@ -1565,9 +1565,9 @@
         // TRANS
 
 
-        ///////////
-        // Rangée 4 
-        ///////////
+        /////////////////////////////////////////////////////////////////////////////
+        // Rangée 4                                                                //
+        /////////////////////////////////////////////////////////////////////////////
 
         // L_SHIFT
         // TRANS
@@ -1945,9 +1945,9 @@
         // TRANS
 
 
-        ///////////
-        // Rangée 5
-        ///////////
+        /////////////////////////////////////////////////////////////////////////////
+        // Rangée 5                                                                //
+        /////////////////////////////////////////////////////////////////////////////
 
         // L_GUI
         // TRANS
@@ -2069,6 +2069,7 @@
             mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
         };
 
+
         // N1 et € 
         n1_euro_qwerty: n1_euro_qwerty {
             compatible = "zmk,behavior-mod-morph";
@@ -2082,6 +2083,7 @@
             bindings = <&kp LS(N1)>, <&kp RA(E)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
 
         // N2 et «
         n2_chevron_l_qwerty: n2_chevron_left_qwerty {
@@ -2109,6 +2111,7 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
  
+
         // N3 et »
         n3_chevron_r_qwerty: n3_chevron_right_qwerty {
             compatible = "zmk,behavior-mod-morph";
@@ -2136,45 +2139,137 @@
         };
 
 
+        // N4 AZERTY
+        n4_azerty: n4_azerty {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N4)>, <&kp N4>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
 
+        // N5 AZERTY
+        n4_azerty: n4_azerty {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N5)>, <&kp N5>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
 
+        // N6 AZERTY
+        n4_azerty: n4_azerty {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N6)>, <&kp N6>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
-        sharp: sharp {
+
+        // N7 AZERTY
+        n4_azerty: n4_azerty {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N7)>, <&kp N7>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+
+        // N8 AZERTY
+        n4_azerty: n4_azerty {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N8)>, <&kp N8>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+
+        // N9 et #
+        sharp_qwerty: sharp_qwerty {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N9>, <&kp LS(N3)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        sharp_azerty: sharp_azerty {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N9)>, <&kp RA(N3)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
-        arob: arobase {
+
+        // N0 et @
+        arob_qwerty: arobase_qwerty {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N0>, <&kp LS(N2)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-    
-        moins: moins_p_inter {
+        arob_azerty: arobase_azerty {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp LS(FSLH)>;
+            bindings = <&kp LS(N0)>, <&kp RA(Q)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        point: point_2_points {
+
+        /////////////////////////////////////////////////////////////////////////////
+        // Rangée 4                                                                //
+        /////////////////////////////////////////////////////////////////////////////
+
+        // - et ?
+        moins_qwerty: moins_p_inter_qwerty {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp PERIOD>, <&kp LS(SEMI)>;
+            bindings = <&kp MINUS>, <&kp QMARK>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        moins_azerty: moins_p_inter_azerty {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N6>, <&kp LS(M)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        virg: virgule_p_virg {
+
+        // . et :
+        point_qwerty: point_2_points_qwerty {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        point_azerty: point_2_points_azerty {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(COMMA)>, <&kp DOT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+
+        // , et ;
+        virg_qwerty: virgule_p_virg_qwerty {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp SEMI>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        virg_azerty: virgule_p_virg_azerty {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp M>, <&kp COMMA>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+
+
+
+
+
+
+
+
 
         dead1: dead_1_key_expl {
             compatible = "zmk,behavior-mod-morph";
