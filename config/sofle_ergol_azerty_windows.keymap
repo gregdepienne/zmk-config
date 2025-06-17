@@ -2215,6 +2215,25 @@
 
 
         /////////////////////////////////////////////////////////////////////////////
+        // Rangée 2                                                                //
+        /////////////////////////////////////////////////////////////////////////////
+
+        // 1DK et !
+        dead1_qwerty: dead_1_key_expl_qwerty {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&sl 2>, <&kp EXCL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        dead1_azerty: dead_1_key_expl_azerty {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&sl 2>, <&kp N8>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+
+        /////////////////////////////////////////////////////////////////////////////
         // Rangée 4                                                                //
         /////////////////////////////////////////////////////////////////////////////
 
@@ -2271,12 +2290,8 @@
 
 
 
-        dead1: dead_1_key_expl {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&sl 2>, <&kp LS(N1)>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+        // vérifier s'il reste du ////// Normal ////// et ////// Shift //////
+
 
         td0: tap_dance_ergol_conf {
             compatible = "zmk,behavior-tap-dance";
