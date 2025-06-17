@@ -42,7 +42,7 @@
 
         // ESC : QWERTY, AZERTY : ESC
         // ` : QWERTY : GRAVE SPACE
-        macro_grave_qw: macro_grave_qwerty {
+        macro_grave_qwerty: macro_grave_qwerty {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -50,7 +50,7 @@
                 ;
         };
         // ` : AZERTY : BSLH SPACE
-        macro_grave_az: macro_grave_azerty {
+        macro_grave_azerty: macro_grave_azerty {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -577,8 +577,17 @@
         // @ : QWERTY : LS(N0)
         // @ : AZERTY : RA(Q)
         ////// 1DK //////
-        // ° : QWERTY : Alt(0176) : DEGREE SIGN
-        macro_plus_minus_win: macro_plus_minus_win {
+        // ° : QWERTY : U+00B0 : Alt(0176) : DEGREE SIGN
+        macro_degree_qwerty: macro_degree_qwerty {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp B &kp N0 &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        };
+        macro_degree_qwerty_win: macro_degree_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -635,37 +644,43 @@
         // Q : QWERTY : Q
         // Q : AZERTY : A
         ////// 1DK //////
-        // â : QWERTY : CARET A
-        macro_a_circ_qwerty: macro_a_circ_qwerty {
+        // â : QWERTY, AZERTY : U+00E2 : Alt(0226) : LATIN SMALL LETTER A WITH CIRCUMFLEX
+        macro_a_circ: macro_a_circ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp LS(N6) &kp A>
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp E &kp N2 &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
-        // â : AZERTY : LBKT Q
-        macro_a_circ_azerty: macro_a_circ_azerty {
+        macro_a_circ_win: macro_a_circ_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp LBKT &kp Q>
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N2 &kp N2 &kp N6>
+                , <&macro_release &kp L_ALT>
                 ;
-        };
+        };  
         ////// 1DK Shift //////
-        // Â : QWERTY : CARET LS(A)
-        macro_cap_a_circ_qwerty: macro_cap_a_circ_qwerty {
+        // Â : QWERTY, AZERTY : U+00C2 : Alt(0194) : LATIN CAPITAL LETTER A WITH CIRCUMFLEX
+        macro_cap_a_circ: macro_cap_a_circ {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp LS(N6) &kp LS(A)>
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp C &kp N2 &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
-        // Â : AZERTY : LBKT LS(Q)
-        macro_cap_a_circ_azerty: macro_cap_a_circ_azerty {
+        macro_cap_a_circ_win: macro_cap_a_circ_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp LBKT &kp LS(Q)>
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N1 &kp N9 &kp N4>
+                , <&macro_release &kp L_ALT>
                 ;
         };
         ////// Symboles //////
@@ -693,24 +708,46 @@
         ////// Normal et Shift //////
         // C : QWERTY, AZERTY : C
         ////// 1DK //////
-        // ç : QUERTY : SQT C
+        // ç : QWERTY : U+00E7 : Alt(0231) : LATIN SMALL LETTER C WITH CEDILLA
         macro_c_cedi_qwerty: macro_c_cedille_qwerty {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp SQT &kp C>
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp E &kp N7 &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
+        macro_c_cedi_qwerty_win: macro_c_cedille_qwerty_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N2 &kp N3 &kp N1>
+                , <&macro_release &kp L_ALT>
+                ;
+        };  
         // ç : AZERTY : N9
         ////// 1DK Shift //////
-        // Ç : QUERTY : SQT LS(C)
+        // Ç : QWERTY : U+00C7 : Alt(0199) : LATIN CAPITAL LETTER C WITH CEDILLA
         macro_cap_c_cedi_qwerty: macro_cap_c_cedille_qwerty {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp SQT &kp LS(C)>
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp C &kp N7 &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
+        macro_cap_c_cedi_qwerty_win: macro_cap_c_cedille_qwerty_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N1 &kp N9 &kp N9>
+                , <&macro_release &kp L_ALT>
+                ;
+        };  
         // Ç : AZERTY : U+00C7 : LATIN CAPITAL LETTER C WITH CEDILLA
         macro_cap_c_cedi_azerty: macro_cap_c_cedille_azerty {
             compatible = "zmk,behavior-macro";
@@ -732,10 +769,10 @@
                 ;
         };
         ////// Symboles //////
-        // < : QUERTY : LESS_THAN
+        // < : QWERTY : LESS_THAN
         // < : AZERTY : BSLH
         ////// Symboles Shift //////
-        // ≤ : QUERTY, AZERTY : U+2264 : LESS-THAN OR EQUAL TO
+        // ≤ : QWERTY, AZERTY : U+2264 : LESS-THAN OR EQUAL TO
         macro_less_eq_to: macro_less_equal_to {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -793,7 +830,7 @@
                 ;
         };
         ////// Symboles //////
-        // > : QUERTY : GREATER_THAN
+        // > : QWERTY : GREATER_THAN
         // > : AZERTY : PIPE
         ////// Symboles Shift //////
         // ≥ : QWERTY, AZERTY : U+2265 : GREATER-THAN OR EQUAL TO
@@ -812,39 +849,45 @@
         ////// Normal et Shift //////
         // P : QWERTY, AZERTY : P
         ////// 1DK //////
-        // ô : QWERTY : CARET O
-        macro_o_circ_qwerty: macro_o_circonflexe_qwerty {
+        // ô : QWERTY, AZERTY : U+00F4 : Alt(0244) : LATIN SMALL LETTER O WITH CIRCUMFLEX
+        macro_o_circ: macro_o_circonflexe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp CARET &kp O>
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp F &kp N4 &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
-        // ô : AZERTY : LBKT O
-        macro_o_circ_azerty: macro_o_circonflexe_azerty {
+        macro_o_circ_win: macro_o_circonflexe_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp LBKT &kp O>
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N2 &kp N4 &kp N4>
+                , <&macro_release &kp L_ALT>
                 ;
-        };
+        };  
         ////// 1DK Shift //////
-        // Ô : QWERTY : CARET LS(O)
-        macro_cap_o_circ_qwerty: macro_cap_o_circonflexe_qwerty {
+        // Ô : QWERTY, AZERTY : U+00D4 : Alt(0212) : LATIN CAPITAL LETTER O WITH CIRCUMFLEX
+        macro_cap_o_circ: macro_cap_o_circonflexe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp CARET &kp O>
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp D &kp N4 &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
-        // Ô : AZERTY : LBKT LS(O)
-        macro_cap_o_circ_azerty: macro_cap_o_circonflexe_azerty {
+        macro_cap_o_circ_win: macro_cap_o_circonflexe_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp LBKT &kp O>
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N2 &kp N1 &kp N2>
+                , <&macro_release &kp L_ALT>
                 ;
-        };
+        };  
         ////// Symboles //////
         // $ : QWERTY : DOLLAR
         // $ : AZERTY : RBKT
@@ -892,7 +935,7 @@
         // NONE
         ////// Symboles //////
         // @ : QWERTY : AT
-        // @ : AZERTY : RA(N2)
+        // @ : AZERTY : RA(N0)
         ////// Symboles Shift //////
         // ° : TODO ACCENT ROND LAYER TOG 
 
@@ -919,7 +962,7 @@
                 , <&macro_tap &kp N0 &kp N2 &kp N3 &kp N0>
                 , <&macro_release &kp L_ALT>
                 ;
-        };       
+        };
         ////// 1DK Shift //////
         // NONE
         ////// Symboles //////
@@ -937,7 +980,7 @@
         // _ : QWERTY : UNDERSCORE
         // _ : AZERTY : N8
         ////// Symboles //////
-        // * : QUERTY : STAR
+        // * : QWERTY : STAR
         // * : AZERTY : PIPE
         ////// Symboles Shift //////
         // × : QWERTY, AZERTY : U+00D7 : MULTIPLICATION SIGN {z notation Cartesian product}
@@ -967,10 +1010,10 @@
         // ! : QWERTY : EXCL
         // ! : AZERTY : N8
         ////// 1DK //////
-        // 2DK : " : QUERTY : DQT
+        // 2DK : " : QWERTY : DQT
         // 2DK : " : AZERTY : LBRC
         ////// 1DK Shift //////
-        // ¡ : QUERTY, AZERTY : U+00A1 : INVERTED EXCLAMATION MARK
+        // ¡ : QWERTY, AZERTY : U+00A1 : INVERTED EXCLAMATION MARK
         macro_inv_excl: macro_inv_excl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -979,7 +1022,7 @@
                 , <&macro_tap &kp U &kp N0 &kp N0 &kp A &kp N1 &kp SPACE>
                 , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
-        // ¡ : QUERTY, AZERTY : Alt(173) : INVERTED EXCLAMATION MARK
+        // ¡ : QWERTY, AZERTY : Alt(173) : INVERTED EXCLAMATION MARK
         macro_inv_excl_win: macro_inv_excl_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -990,26 +1033,61 @@
                 ;
         };
         ////// Symboles //////
-        // ' : QUERTY : SQT SPACE
+        // ' : QWERTY : SQT SPACE
         // ' : AZERTY : N4
         ////// Symboles Shift //////
-        // ' MODIFIER ACUTE : QUERTY :: SQT
+        // ' MODIFIER ACUTE : QWERTY :: SQT
         // ' MODIFIER ACUTE : AZERTY : TODO MODIFIER ACUTE : NONE 
 
 
-
-
-
-
-
-
-
-
-        // Y : Y
-        // û : LBKT U
-        // Û : LBKT LS(U)
+        ////// Normal et Shift //////
+        // Y : QWERTY, AZERTY : Y
+        ////// 1DK //////
+        // û : QWERTY, AZERTY : U+00FB : Alt(0251) : LATIN SMALL LETTER U WITH CIRCUMFLEX
+        macro_u_circ: macro_u_circonflexe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp F &kp B &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        };
+        macro_u_circ_win: macro_u_circonflexe_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N2 &kp N5 &kp N1>
+                , <&macro_release &kp L_ALT>
+                ;
+        };  
+        ////// 1DK Shift //////
+        // Û : QWERTY, AZERTY : U+00DB : Alt(0219) : LATIN CAPITAL LETTER U WITH CIRCUMFLEX
+        macro_cap_u_circ: macro_cap_u_circonflexe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp D &kp B &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        };
+        macro_cap_u_circ_win: macro_cap_u_circonflexe_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N2 &kp N1 &kp N9>
+                , <&macro_release &kp L_ALT>
+                ;
+        };  
+        ////// Symboles //////
         // ` : macro_grave
         // ` : RA(BSLH)
+        ////// Symboles Shift //////
+        // ' MODIFIER GRAVE : QWERTY :: GRAVE
+        // ' MODIFIER GRAVE : AZERTY : TODO MODIFIER GRAVE : NONE 
 
         // BACKSPACE
         // TOGGLE 1DK
@@ -1022,11 +1100,38 @@
         ///////////
 
         // CAPS
+        // TRANS
+        // TRANS
+        // TRANS
+        // TRANS
 
-        // A : Q
-        // à : N0
-        // À : U+00C0 : LATIN CAPITAL LETTER A WITH GRAVE
-        macro_c_a_grave: macro_cap_a_grave {
+        ////// Normal et Shift //////
+        // A : QWERTY : A
+        // A : AZERTY : Q
+        ////// 1DK //////
+        // à : QWERTY : U+00E0 : Alt(0224) : LATIN SMALL LETTER A WITH GRAVE
+        macro_a_grave_qwerty: macro_a_grave_qwerty {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp E &kp N0 &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        };
+        macro_a_grave_qwerty_win: macro_a_grave_qwerty_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N2 &kp N2 &kp N4>
+                , <&macro_release &kp L_ALT>
+                ;
+        };  
+        // à : AZERTY : N0
+        ////// 1DK Shift //////
+        // À : QWERTY, AZERTY : U+00C0 : Alt(0192) : LATIN CAPITAL LETTER A WITH GRAVE
+        macro_cap_a_grave: macro_cap_a_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -1035,8 +1140,7 @@
                 , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
-        // À : Alt(0192) : LATIN CAPITAL LETTER A WITH GRAVE
-        macro_c_a_grave_win: macro_cap_a_grave_win {
+        macro_cap_a_grave_win: macro_cap_a_grave_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -1045,11 +1149,39 @@
                 , <&macro_release &kp L_ALT>
                 ;
         };
+        ////// Symboles //////
+        // { : QWERTY : LBRC
+        // { : AZERTY : RA(N4)
+        ////// Symboles Shift //////
+        // ˇ (MODIFIER) : QWERTY, AZERTY : TODO ACCENT CIRCONFLEXE INVERSÉ LAYER TOG
 
-        // S : S
-        // é : N2
-        // É : U+00C9 : LATIN CAPITAL LETTER E WITH ACUTE
-        macro_c_e_acute: macro_cap_e_acute {
+
+        ////// Normal et Shift //////
+        // S : QWERTY, AZERTY : S
+        ////// 1DK //////
+        // é : QWERTY : U+00E9 : Alt(0233) : LATIN SMALL LETTER E WITH ACUTE
+        macro_e_acute_qwerty: macro_e_acute_qwerty {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp E &kp N9 &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        };
+        macro_e_acute_qwerty_win: macro_e_acute_qwerty_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N2 &kp N3 &kp N3>
+                , <&macro_release &kp L_ALT>
+                ;
+        };  
+        // é : AZERTY : N2
+        ////// 1DK Shift //////
+        // É : QWERTY, AZERTY : U+00C9 : Alt(0201) : LATIN CAPITAL LETTER E WITH ACUTE
+        macro_cap_e_acute: macro_cap_e_acute {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -1058,8 +1190,7 @@
                 , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
-        // É : Alt(0201) : LATIN CAPITAL LETTER E WITH ACUTE
-        macro_c_e_acute_win: macro_cap_e_acute_win {
+        macro_cap_e_acute_win: macro_cap_e_acute_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -1068,11 +1199,39 @@
                 , <&macro_release &kp L_ALT>
                 ;
         };
+        ////// Symboles //////
+        // ( : QWERTY : LPAR
+        // ( : AZERTY : N5
+        ////// Symboles Shift //////
+        // NONE
 
-        // E : E
-        // è : N3
-        // È : U+00C8 : LATIN CAPITAL LETTER E WITH GRAVE
-        macro_c_e_grave: macro_cap_e_grave {
+
+        ////// Normal et Shift //////
+        // E : QWERTY, AZERTY : E
+        ////// 1DK //////
+        // è : QWERTY : U+00E8 : Alt(0232) : LATIN SMALL LETTER E WITH GRAVE
+        macro_e_grave_qwerty: macro_e_grave_qwerty {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp E &kp N8 &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        };
+        macro_e_grave_qwerty_win: macro_e_grave_qwerty_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N2 &kp N3 &kp N2>
+                , <&macro_release &kp L_ALT>
+                ;
+        };
+        // è : AZERTY : N3
+        ////// 1DK Shift //////
+        // È : QWERTY, AZERTY : U+00C8 : Alt(0200) : LATIN CAPITAL LETTER E WITH GRAVE
+        macro_cap_e_grave: macro_cap_e_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -1081,8 +1240,7 @@
                 , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
-        // È : Alt(0200) : LATIN CAPITAL LETTER E WITH GRAVE
-        macro_c_e_grave_win: macro_cap_e_grave_win {
+        macro_cap_e_grave_win: macro_cap_e_grave_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -1091,13 +1249,66 @@
                 , <&macro_release &kp L_ALT>
                 ;
         };
-        
-        // N : N
-        // ê : LBKT E
-        // Ê : LBKT LS(E)
+        ////// Symboles //////
+        // ) : QWERTY : RPAR
+        // ) : AZERTY : MINUS
+        ////// Symboles Shift //////
+        // NONE
 
-        // F : F
-        // ñ : U+00F1 : LATIN SMALL LETTER N WITH TILDE
+
+        ////// Normal et Shift //////
+        // N : QWERTY, AZERTY : N
+        ////// 1DK //////
+        // ê : QWERTY, AZERTY : U+00EA : Alt(234) : LATIN SMALL LETTER E WITH CIRCUMFLEX
+        macro_e_circ: macro_e_circonflexe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp E &kp A &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        };
+        macro_e_circ_win: macro_e_circonflexe_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N2 &kp N3 &kp N4>
+                , <&macro_release &kp L_ALT>
+                ;
+        };
+        ////// 1DK Shift //////
+        // Ê : QWERTY, AZERTY : U+00CA : Alt(0202) : LATIN CAPITAL LETTER E WITH CIRCUMFLEX
+        macro_cap_e_circ: macro_cap_e_circonflexe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp C &kp A &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        };
+        macro_cap_e_circ_win: macro_cap_e_circonflexe_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N2 &kp N0 &kp N2>
+                , <&macro_release &kp L_ALT>
+                ;
+        };
+        ////// Symboles //////
+        // } : QWERTY : RBRC
+        // } : AZERTY : RA(EQUAL)
+        ////// Symboles Shift //////
+        // ˙ (MODIFIER) : QWERTY, AZERTY : TODO ACCENT POINT LAYER TOG
+
+
+        ////// Normal et Shift //////
+        // F : QWERTY, AZERTY : F
+        ////// 1DK //////
+        // ñ : QWERTY, AZERTY : U+00F1 : Alt(0241) : LATIN SMALL LETTER N WITH TILDE
         macro_n_tilde: macro_n_tilde {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1107,7 +1318,6 @@
                 , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
-        // ñ : Alt(0241) : LATIN SMALL LETTER N WITH TILDE
         macro_n_tilde_win: macro_n_tilde_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1117,8 +1327,9 @@
                 , <&macro_release &kp L_ALT>
                 ;
         };
-        // Ñ : U+00D1 : LATIN CAPITAL LETTER N WITH TILDE
-        macro_c_n_tilde: macro_cap_n_tilde {
+        ////// 1DK Shift //////
+        // Ñ : QWERTY, AZERTY : U+00D1 : Alt(0209) : LATIN CAPITAL LETTER N WITH TILDE
+        macro_cap_n_tilde: macro_cap_n_tilde {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -1127,8 +1338,7 @@
                 , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
-        // Ñ : Alt(0209) : LATIN CAPITAL LETTER N WITH TILDE
-        macro_c_n_tilde_win: macro_cap_n_tilde_win {
+        macro_cap_n_tilde_win: macro_cap_n_tilde_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -1137,25 +1347,210 @@
                 , <&macro_release &kp L_ALT>
                 ;
         };
+        ////// Symboles //////
+        // = : QWERTY, AZERTY : EQUAL
+        ////// Symboles Shift //////
+        // ≠ : QWERTY, AZERTY : U+2260 : NOT EQUAL TO
+        // ≠ : NO macro_not_equal_win
+        macro_not_equal: macro_not_equal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N2 &kp N2 &kp N6 &kp N0 &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        };
 
-        // L : L
-        // ( : N5
 
-        // R : R
-        // ) : MINUS
+        ////// Normal et Shift //////
+        // L : QWERTY, AZERTY : L
+        ////// 1DK //////
+        // ( : QWERTY : LPAR
+        // ( : AZERTY : N5
+        ////// 1DK Shift //////
+        // NONE
+        ////// Symboles //////
+        // \ : QWERTY : BSLH
+        // \ : AZERTY : RA(N8)
+        ////// Symboles Shift //////
+        // / (MODIFIER) : QWERTY, AZERTY : TODO CROSSED OUT LAYER TOG
 
-        // T : T
-        // î : LBKT I
-        // Î : LBKT LS(I)
 
-        // I : I
-        // ï : LS(LBKT) I
-        // Ï : LS(LBKT) LS(I)
+        ////// Normal et Shift //////
+        // R : QWERTY, AZERTY : R
+        ////// 1DK //////
+        // ) : QWERTY : RPAR
+        // ) : AZERTY : MINUS
+        ////// 1DK Shift //////
+        // NONE
+        ////// Symboles //////
+        // + : QWERTY, AZERTY : PLUS
+        ////// Symboles Shift //////
+        // ± : QWERTY, AZERTY : U+00B1 : Alt(0177) : PLUS-MINUS SIGN {biquintile (astrological aspect: 144°)}
+        macro_plus_minus: macro_plus_minus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp B &kp N1 &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        };
+        // ± : Alt(0177) : PLUS-MINUS SIGN {biquintile (astrological aspect: 144°)}
+        macro_plus_minus_win: macro_plus_minus_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N1 &kp N7 &kp N7>
+                , <&macro_release &kp L_ALT>
+                ;
+        };
 
-        // U : U
-        // ù : SQT
-        // Ù : U+00D9 : LATIN CAPITAL LETTER U WITH GRAVE
-        macro_c_u_grave: macro_cap_u_grave {
+
+        ////// Normal et Shift //////
+        // T : QWERTY, AZERTY : T
+        ////// 1DK //////
+        // î : U+00EE : Alt(0238) : LATIN SMALL LETTER I WITH CIRCUMFLEX
+        macro_i_circ: macro_i_circ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp E &kp E &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        };
+        macro_i_circ_win: macro_i_circ_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N2 &kp N3 &kp N8>
+                , <&macro_release &kp L_ALT>
+                ;
+        };
+        ////// 1DK Shift //////
+        // Î : U+00CE : Alt(0206) : LATIN CAPITAL LETTER I WITH CIRCUMFLEX
+        macro_cap_i_circ: macro_cap_i_circ {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp C &kp E &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        };
+        macro_cap_i_circ_win: macro_cap_i_circ_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N2 &kp N0 &kp N6>
+                , <&macro_release &kp L_ALT>
+                ;
+        };
+        ////// Symboles //////
+        // - : QWERTY : MINUS
+        // - : AZERTY : N6
+        ////// Symboles Shift //////
+        // ¯ (MODIFIER) : QWERTY, AZERTY : TODO FLAT ACCENT LAYER TOG
+
+
+        ////// Normal et Shift //////
+        // I : QWERTY, AZERTY : I
+        ////// 1DK //////
+        // ï : QWERTY, AZERTY : U+00EF : Alt(0239) : LATIN SMALL LETTER I WITH DIAERESIS
+        macro_i_trema: macro_i_trema {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp E &kp F &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        };
+        macro_i_trema_win: macro_i_trema_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N2 &kp N3 &kp N9>
+                , <&macro_release &kp L_ALT>
+                ;
+        };
+        ////// 1DK Shift //////
+        // Ï : QWERTY, AZERTY : U+00CF : Alt(0207) : LATIN CAPITAL LETTER I WITH DIAERESIS
+        macro_cap_i_trema: macro_cap_i_trema {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp C &kp F &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        };
+        macro_cap_i_trema_win: macro_cap_i_trema_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N2 &kp N0 &kp N7>
+                , <&macro_release &kp L_ALT>
+                ;
+        };
+        ////// Symboles //////
+        // / : QWERTY : FSLH
+        // / : AZERTY : LS(DOT)
+        ////// Symboles Shift //////
+        // ÷ : QWERTY, AZERTY : U+00F7 : Alt(0247) : DIVISION SIGN {obelus}
+        macro_division: macro_division {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp F &kp N7 &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        };
+        macro_division_win: macro_division_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N2 &kp N4 &kp N7>
+                , <&macro_release &kp L_ALT>
+                ;
+        };
+
+
+        ////// Normal et Shift //////
+        // U : QWERTY, AZERTY : U
+        ////// 1DK //////
+        // ù : AZERTY : SQT
+        // ù : QWERTY : U+00F9 : Alt(0249) : LATIN SMALL LETTER U WITH GRAVE
+        macro_u_grave_qwerty: macro_u_grave_qwerty {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp F &kp N9 &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        };
+        macro_u_grave_qwerty_win: macro_u_grave_qwerty_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N2 &kp N4 &kp N9>
+                , <&macro_release &kp L_ALT>
+                ;
+        };
+        ////// 1DK Shift //////
+        // Ù : QWERTY, AZERTY : U+00D9 : Alt(0217) : LATIN CAPITAL LETTER U WITH GRAVE
+        macro_cap_u_grave: macro_cap_u_grave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -1164,8 +1559,7 @@
                 , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
-        // Ù : Alt(0217) : LATIN CAPITAL LETTER U WITH GRAVE
-        macro_c_u_grave_win: macro_cap_u_grave_win {
+        macro_cap_u_grave_win: macro_cap_u_grave_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -1174,17 +1568,36 @@
                 , <&macro_release &kp L_ALT>
                 ;
         };
+        ////// Symboles //////
+        // " : QWERTY : DQT
+        // " : AZERTY : N3
+        ////// Symboles Shift //////
+        // ˝ (MODIFIER) : QWERTY, AZERTY : TODO ACCENT DOUBLE AIGU LAYER TOG
+
 
         // ENTER
+        // TRANS
+        // TRANS
+        // TRANS
+        // TRANS
+
 
         ///////////
         // Rangée 4 
         ///////////
 
         // L_SHIFT
+        // TRANS
+        // TRANS
+        // TRANS
+        // TRANS
 
-        // Z : W
-        // æ : U+00E6 : LATIN SMALL LETTER AE {latin small ligature ae (1.1); ash (from Old English æsc)}
+
+        ////// Normal et Shift //////
+        // Z : QWERTY : Z
+        // Z : AZERTY : W
+        ////// 1DK //////
+        // æ : QWERTY, AZERTY : U+00E6 : Alt(0230) : LATIN SMALL LETTER AE {latin small ligature ae (1.1); ash (from Old English æsc)}
         macro_a_e: macro_a_e {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1194,7 +1607,6 @@
                 , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
-        // æ : Alt(0230) : LATIN SMALL LETTER AE {latin small ligature ae (1.1); ash (from Old English æsc)}
         macro_a_e_win: macro_a_e_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1204,8 +1616,9 @@
                 , <&macro_release &kp L_ALT>
                 ;
         };
-        // Æ : U+00C6 : LATIN CAPITAL LETTER AE {latin capital ligature ae (1.1)}
-        macro_c_a_e: macro_cap_a_e {
+        ////// 1DK Shift //////
+        // Æ : QWERTY, AZERTY : U+00C6 : Alt(0198) : LATIN CAPITAL LETTER AE {latin capital ligature ae (1.1)}
+        macro_cap_a_e: macro_cap_a_e {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -1214,8 +1627,7 @@
                 , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
-        // Æ : Alt(0198) : LATIN CAPITAL LETTER AE {latin capital ligature ae (1.1)}
-        macro_c_a_e_win: macro_cap_a_e_win {
+        macro_cap_a_e_win: macro_cap_a_e_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -1224,9 +1636,17 @@
                 , <&macro_release &kp L_ALT>
                 ;
         };
+        ////// Symboles //////
+        // ~ : QUERTY : TILDE
+        // ~ : AZERTY : RA(N2)
+        ////// Symboles Shift //////
+        // ~ : TODO ACCENT TILDE LAYER TOG
 
-        // X : X
-        // ß : U+00DF : LATIN SMALL LETTER SHARP S {Eszett}
+
+        ////// Normal et Shift //////
+        // X : QWERTY, AZERTY : X
+        ////// 1DK //////
+        // ß : QWERTY, AZERTY : U+00DF : Alt(0223) : LATIN SMALL LETTER SHARP S {Eszett}
         macro_s_eszett: macro_s_eszett {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1236,7 +1656,6 @@
                 , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
-        // ß : Alt(0223) : LATIN SMALL LETTER SHARP S {Eszett}
         macro_s_eszett_win: macro_s_eszett_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1246,7 +1665,8 @@
                 , <&macro_release &kp L_ALT>
                 ;
         };
-        // ẞ : U+1E9E : LATIN CAPITAL LETTER SHARP S
+        ////// 1DK Shift //////
+        // ẞ : QWERTY, AZERTY : U+1E9E : LATIN CAPITAL LETTER SHARP S
         macro_s_sharp: macro_s_sharp {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1256,11 +1676,22 @@
                 , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
-        // ẞ : NO macro_s_sharp_win 
+        // ẞ : NO macro_s_sharp_win : NONE
+        ////// Symboles //////
+        // [ : QWERTY : LBKT
+        // [ : AZERTY : RA(N5)
+        ////// Symboles Shift //////
+        // , (MODIFIER) : QWERTY, AZERTY : TODO CÉDILLE LAYER TOG
 
-        // - : N6
-        // ? : LS(M)
-        // ‑ : U+2011 : NON-BREAKING HYPHEN
+
+        ////// Normal //////
+        // - : QWERTY : MINUS
+        // - : AZERTY : N6
+        ////// Shift //////
+        // ? : QWERTY : QMARK
+        // ? : AZERTY : LS(M)
+        ////// 1DK //////
+        // ‑ : QWERTY, AZERTY : U+2011 : NON-BREAKING HYPHEN
         macro_nb_hyphen: macro_non_breaking_hyphen {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1270,8 +1701,9 @@
                 , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
-        // ‑ : NO macro_nb_hyphen_win 
-        // ¿ : U+00BF : INVERTED QUESTION MARK {turned question mark}
+        // ‑ : NO macro_nb_hyphen_win : NONE
+        ////// 1DK Shift //////
+        // ¿ : QWERTY, AZERTY : U+00BF : Alt(0191) : INVERTED QUESTION MARK {turned question mark}
         macro_inv_qmark: macro_inv_question_mark {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1281,7 +1713,6 @@
                 , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
-        // ¿ : Alt(0191) : INVERTED QUESTION MARK {turned question mark}
         macro_inv_qmark_win: macro_inv_question_mark_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1291,9 +1722,17 @@
                 , <&macro_release &kp L_ALT>
                 ;
         };
+        ////// Symboles //////
+        // ] : QWERTY : RBKT
+        // ] : AZERTY : RA(MINUS)
+        ////// Symboles Shift //////
+        // ˛ (MODIFIER) : QWERTY, AZERTY : TODO CÉDILLE INVERSÉE LAYER TOG
 
-        // V : V
-        // – : U+2013 : EN DASH
+
+        ////// Normal et Shift //////
+        // V : QWERTY, AZERTY : V
+        ////// 1DK //////
+        // – : QWERTY, AZERTY : U+2013 : Alt(0150) : EN DASH
         macro_en_dash: macro_en_dash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1303,7 +1742,6 @@
                 , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
-        // – : Alt(0150) : EN DASH
         macro_en_dash_win: macro_en_dash_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1313,10 +1751,21 @@
                 , <&macro_release &kp L_ALT>
                 ;
         };
+        ////// 1DK Shift //////
+        // NONE
+        ////// Symboles //////
+        // _ : QWERTY : UNDER
+        // _ : AZERTY : RA(N8)
+        ////// Symboles Shift //////
+        // – : QWERTY, AZERTY : U+2013 : Alt(0150) : EN DASH
+        // macro_en_dash
+        // macro_en_dash_win
 
 
-        // B : B
-        // — : U+2014 : EM DASH
+        ////// Normal et Shift //////
+        // B : QWERTY, AZERTY : B
+        ////// 1DK //////
+        // — : QWERTY, AZERTY : U+2014 : Alt(0151) : EM DASH
         macro_em_dash: macro_em_dash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1326,7 +1775,6 @@
                 , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
-        // — : Alt(0151) : EM DASH
         macro_em_dash_win: macro_em_dash_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1336,10 +1784,23 @@
                 , <&macro_release &kp L_ALT>
                 ;
         };
+        ////// 1DK Shift //////
+        // NONE
+        ////// Symboles //////
+        // # : QWERTY : HASH
+        // # : AZERTY : RA(N3)
+        ////// Symboles Shift //////
+        // NONE
 
-        // . : LS(COMMA)
-        // : : DOT
-        // … : U+2026 : HORIZONTAL ELLIPSIS {three dot leader}
+
+        ////// Normal //////
+        // . : QWERTY : DOT
+        // . : AZERTY : LS(COMMA)
+        ////// Shift //////
+        // : : QWERTY : COLON
+        // : : AZERTY : DOT
+        ////// 1DK ////////
+        // … : QWERTY, AZERTY : U+2026 : Alt(0133) : HORIZONTAL ELLIPSIS {three dot leader}
         macro_h_ellipsis: macro_horizontal_ellipsis {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1349,7 +1810,6 @@
                 , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
-        // … : Alt(0133) : HORIZONTAL ELLIPSIS {three dot leader}
         macro_h_ellipsis_win: macro_horizontal_ellipsis_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1359,16 +1819,84 @@
                 , <&macro_release &kp L_ALT>
                 ;
         };
+        ////// Symboles //////
+        // | : QWERTY : PIPE
+        // | : AZERTY : RA(N6)
+        ////// Symboles Shift //////
+        // ¦ : QWERTY, AZERTY : U+00A6 : Alt(0166) : BROKEN BAR {parted rule (in typography)}
+        macro_broken_bar: macro_broken_bar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp A &kp N6 &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        };
+        macro_broken_bar_win: macro_broken_bar_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N1 &kp N6 &kp N6>
+                , <&macro_release &kp L_ALT>
+                ;
+        };
 
-        // H : H
 
-        // G : G
-        // TODO LAYER TOG ALPHABET GREC !!!
+        ////// Normal et Shift //////
+        // H : QWERTY, AZERTY : H
+        ////// 1DK //////
+        // NONE
+        ////// 1DK Shift //////
+        // NONE
+        ////// Symboles //////
+        // ! : QWERTY : EXCL
+        // ! : AZERTY : FSLH
+        ////// Symboles Shift //////
+        // ¬ : QWERTY, AZERTY : U+00AC : Alt(0172) : NOT SIGN {angled dash (in typography)}
+        macro_not: macro_not {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N0 &kp N0 &kp A &kp C &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        };
+        macro_not_win: macro_not_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N1 &kp N7 &kp N2>
+                , <&macro_release &kp L_ALT>
+                ;
+        };
 
-        // , : M
-        // ; : COMMA
-        // · : U+00B7 : MIDDLE DOT {midpoint (in typography); Georgian comma; Greek middle dot (ano teleia)}
-        macro_m_dot: macro_middle_dot {
+
+        ////// Normal et Shift //////
+        // G : QWERTY, AZERTY : G
+        ////// 1DK ////////
+        // TODO ALPHABET GREC LAYER TOG 
+        ////// 1DK Shift ////////
+        // NONE
+        ////// Symboles //////
+        // ; : QWERTY : SEMI
+        // ; : AZERTY : COMMA
+        ////// Symboles Shift //////
+        // ¸ (MODIFIER) : QWERTY, AZERTY : TODO CÉDILLE COURBE LAYER TOG
+
+;
+        ////// Normal //////
+        // , : QWERTY : COMMA
+        // , : AZERTY : M
+        ////// Shift //////
+        // ; : QWERTY : SEMI
+        // ; : AZERTY : COMMA
+        ////// 1DK ////////
+        // · : QWERTY, AZERTY : U+00B7 : Alt(0183) : MIDDLE DOT {midpoint (in typography); Georgian comma; Greek middle dot (ano teleia)}
+        macro_mid_dot: macro_middle_dot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -1377,8 +1905,7 @@
                 , <&macro_release &kp L_CTL &kp L_SHIFT>
                 ;
         };
-        // · : Alt(0183) : MIDDLE DOT {midpoint (in typography); Georgian comma; Greek middle dot (ano teleia)}
-        macro_m_dot_win: macro_middle_dot_win {
+        macro_mid_dot_win: macro_middle_dot_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -1387,14 +1914,70 @@
                 , <&macro_release &kp L_ALT>
                 ;
         };
+        ////// 1DK Shift ////////
+        // • : QWERTY, AZERTY : U+2022 : Alt(0149) : BULLET {black small circle}
+        macro_bullet: macro_bullet {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_CTL &kp L_SHIFT>
+                , <&macro_tap &kp U &kp N2 &kp N0 &kp N2 &kp N2 &kp SPACE>
+                , <&macro_release &kp L_CTL &kp L_SHIFT>
+                ;
+        };
+        macro_bullet_win: macro_bullet_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp L_ALT>
+                , <&macro_tap &kp N0 &kp N1 &kp N4 &kp N9>
+                , <&macro_release &kp L_ALT>
+                ;
+        };
+        ////// Symboles //////
+        // : : QWERTY : COLON
+        // : : AZERTY : DOT
+        ////// Symboles Shift //////
+        // : : QWERTY : COLON
+        // : : AZERTY : DOT
         
-        // K : K
+
+        ////// Normal et Shift //////
+        // K : QWERTY, AZERTY : K
+        ////// 1DK ////////
+        // NONE
+        ////// 1DK Shift ////////
+        // NONE
+        ////// Symboles //////
+        // ? : QWERTY : QMARK
+        // ? : AZERTY : LS(M)
+        ////// Symboles Shift //////
+        // ˘ : QWERTY, AZERTY : TODO ACCENT CIRCONFLEXE INVERSÉ ARRONDI LAYER TOG
+
 
         // R_SHIFT
+        // TRANS
+        // TRANS
+        // TRANS
+        // TRANS
+
 
         ///////////
         // Rangée 5
         ///////////
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         // L_GUI
         
@@ -1440,173 +2023,12 @@
 
 
 
-        ///////////
-        // Symboles
-        // Rangée 3
-        ///////////
 
-        // TRANS
 
-        // { : RA(N9)
-        // ˇ : TODO ACCENT CIRCONFLEXE INVERSÉ LAYER TOG
-
-        // ( : N5
-        // NONE
-
-        // ) : N6
-        // NONE
-
-        // } : RA(N0)
-        // ˙ : TODO ACCENT POINT LAYER TOG
-
-        // = : FSLH
-        // ≠ : U+2260 : NOT EQUAL TO
-        macro_not_equal: macro_not_equal {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp L_CTL &kp L_SHIFT>
-                , <&macro_tap &kp U &kp N2 &kp N2 &kp N6 &kp N0 &kp SPACE>
-                , <&macro_release &kp L_CTL &kp L_SHIFT>
-                ;
-        };
-        // ≠ : NO macro_not_equal_win 
-
-        // \ : RA(N8)
-        // / : TODO BARRÉ LAYER TOG
-
-        // + : LS(FSLH)
-        // ± : U+00B1 : PLUS-MINUS SIGN {biquintile (astrological aspect: 144°)}
-        macro_plus_minus: macro_plus_minus {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp L_CTL &kp L_SHIFT>
-                , <&macro_tap &kp U &kp N0 &kp N0 &kp B &kp N1 &kp SPACE>
-                , <&macro_release &kp L_CTL &kp L_SHIFT>
-                ;
-        };
-        // ± : Alt(0177) : PLUS-MINUS SIGN {biquintile (astrological aspect: 144°)}
-        macro_plus_minus_win: macro_plus_minus_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp L_ALT>
-                , <&macro_tap &kp N0 &kp N1 &kp N7 &kp N7>
-                , <&macro_release &kp L_ALT>
-                ;
-        };
-
-        // - : N6
-        // ¯ : TODO ACCENT TRAIT LAYER TOG
-
-        // / : LS(DOT)
-        // ÷ : U+00F7 : DIVISION SIGN {obelus}
-        macro_division: macro_division {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp L_CTL &kp L_SHIFT>
-                , <&macro_tap &kp U &kp N0 &kp N0 &kp F &kp N7 &kp SPACE>
-                , <&macro_release &kp L_CTL &kp L_SHIFT>
-                ;
-        };
-        // ÷ : Alt(0247) : DIVISION SIGN {obelus}
-        macro_division_win: macro_division_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp L_ALT>
-                , <&macro_tap &kp N0 &kp N2 &kp N4 &kp N7>
-                , <&macro_release &kp L_ALT>
-                ;
-        };
-
-        // " : N3
-        // ˝ : TODO ACCENT DOUBLE AIGU LAYER TOG
-
-        // TRANS
 
         ///////////
         // Symboles
-        // Rangée 4
-        ///////////
-
-        // TRANS
-
-        // ~ : RA(N2)
-        // ~ : TODO ACCENT TILDE LAYER TOG
-
-        // [ : RA(N5)
-        // , : TODO CÉDILLE LAYER TOG
-
-        // ] : RA(MINUS)
-        // ˛ : TODO CÉDILLE INVERSÉE LAYER TOG
-
-        // _ : RA(N8)
-        // – : U+2013 : EN DASH : macro_en_dash
-
-        // # : RA(N3)
-        // NONE
-
-        // | : RA(N6)
-        // ¦ : U+00A6 : BROKEN BAR {parted rule (in typography)}
-        macro_broken_bar: macro_broken_bar {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp L_CTL &kp L_SHIFT>
-                , <&macro_tap &kp U &kp N0 &kp N0 &kp A &kp N6 &kp SPACE>
-                , <&macro_release &kp L_CTL &kp L_SHIFT>
-                ;
-        };
-        // ¦ : Alt(0166) : BROKEN BAR {parted rule (in typography)}
-        macro_broken_bar_win: macro_broken_bar_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp L_ALT>
-                , <&macro_tap &kp N0 &kp N1 &kp N6 &kp N6>
-                , <&macro_release &kp L_ALT>
-                ;
-        };
-
-        // ! : FSLH
-        // ¬ : U+00AC : NOT SIGN {angled dash (in typography)}
-        macro_not: macro_not {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp L_CTL &kp L_SHIFT>
-                , <&macro_tap &kp U &kp N0 &kp N0 &kp A &kp C &kp SPACE>
-                , <&macro_release &kp L_CTL &kp L_SHIFT>
-                ;
-        };
-        // ¬ : Alt(0172) : NOT SIGN {angled dash (in typography)}
-        macro_not_win: macro_not_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp L_ALT>
-                , <&macro_tap &kp N0 &kp N1 &kp N7 &kp N2>
-                , <&macro_release &kp L_ALT>
-                ;
-        };
-
-        // ; : COMMA
-        // ¸ : TODO CÉDILLE COURBE LAYER TOG
-
-        // : : DOT
-        // : : DOT
-
-        // ? : LS(M)
-        // ˘ : TODO ACCENT CIRCONFLEXE INVERSÉ ARRONDI LAYER TOG
-
-        // TRANS
-
-        ///////////
-        // Symboles
-        // Rangée 4
+        // Rangée 5
         ///////////
 
         // TRANS
