@@ -951,13 +951,14 @@
         ////// Symboles Shift //////
         // NONE
 
+
         ////// Normal et Shift //////
         // D : QWERTY, AZERTY : D
         ////// 1DK //////
-        // _ : QWERTY : UNDERSCORE
+        // _ : QWERTY : UNDER
         // _ : AZERTY : N8
         ////// 1DK Shift //////
-        // _ : QWERTY : UNDERSCORE
+        // _ : QWERTY : UNDER
         // _ : AZERTY : N8
         ////// Symboles //////
         // * : QWERTY : STAR
@@ -2050,7 +2051,7 @@
 
     };    
 
-  behaviors {
+    behaviors {
         /////////////////////////////////////////////////////////////////////////////
         // Rangée 1                                                                //
         /////////////////////////////////////////////////////////////////////////////
@@ -2218,6 +2219,110 @@
         // Rangée 2                                                                //
         /////////////////////////////////////////////////////////////////////////////
 
+        // â et Â
+        a_circ: a_circ {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&macro_a_circ>, <&macro_cap_a_circ>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        a_circ_win: a_circ_win {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&macro_a_circ_win>, <&macro_cap_a_circ_win>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+
+        // ç et Ç
+        c_cedi_qwerty: c_cedi_qwerty {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&macro_c_cedi_qwerty>, <&macro_cap_c_cedi_qwerty>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        c_cedi_qwerty_win: c_cedi_qwerty_win {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&macro_c_cedi_qwerty_win>, <&macro_cap_c_cedi_qwerty_win>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        c_cedi_azerty: c_cedi_azerty {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N9>, <&macro_cap_c_cedi_azerty>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        c_cedi_azerty_win: c_cedi_azerty_win {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N9>, <&macro_cap_c_cedi_azerty_win>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+
+        // œ et Œ
+        o_e: o_e {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&macro_o_e>, <&macro_cap_o_e>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        o_e_win: o_e_win {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&macro_o_e_win>, <&macro_cap_o_e_win>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // ô et Ô
+        o_circ: o_circ {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&macro_o_circ>, <&macro_cap_o_circ>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        o_circ_win: o_circ_win {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&macro_o_circ_win>, <&macro_cap_o_circ_win>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // W : no 1DK : NONE
+
+        // J : no 1DK : NONE
+
+        // µ et none
+        micro: micro {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&macro_micro>, <&NONE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        micro_win: micro_win {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&macro_micro_win>, <&NONE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+
+        // _ et _ 
+        under_qwerty: under_qwerty {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&UNDER>, <&UNDER>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        under_azerty: under_azerty {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N8>, <&kp N8>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+
         // 1DK et !
         dead1_qwerty: dead_1_key_expl_qwerty {
             compatible = "zmk,behavior-mod-morph";
@@ -2231,6 +2336,142 @@
             bindings = <&sl 2>, <&kp N8>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+
+        // û et Û
+        u_circ: u_circ {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&macro_u_circ>, <&macro_cap_u_circ>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        u_circ_win: u_circ_win {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&macro_u_circ_win>, <&macro_cap_u_circ_win>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+
+        /////////////////////////////////////////////////////////////////////////////
+        // Rangée 3                                                                //
+        /////////////////////////////////////////////////////////////////////////////
+
+        // à et À
+        a_grave_qwerty: a_grave_qwerty {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&macro_a_grave_qwerty>, <&macro_cap_a_grave_qwerty>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        a_grave_qwerty_win: a_grave_qwerty_win {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&macro_a_grave_qwerty_win>, <&macro_cap_a_grave_win>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        a_grave_azerty: a_grave_azerty {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N0>, <&macro_cap_a_grave>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        a_grave_azerty_win: a_grave_azerty_win {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N0>, <&macro_cap_a_grave_win>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+
+        // é et É
+        e_acute_qwerty: e_acute_qwerty {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&macro_e_acute_qwerty>, <&macro_cap_e_acute>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        e_acute_qwerty_win: e_acute_qwerty_win {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&macro_e_acute_qwerty_win>, <&macro_cap_e_acute_win>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        e_acute_azerty: e_acute_azerty {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N2>, <&macro_cap_e_acute>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        e_acute_azerty_win: e_acute_azerty_win {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N2>, <&macro_cap_e_acute_win>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+
+        // è et È
+        e_grave_qwerty: e_grave_qwerty {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&macro_e_grave_qwerty>, <&macro_cap_e_grave>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        e_grave_qwerty_win: e_grave_qwerty_win {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&macro_e_grave_qwerty_win>, <&macro_cap_e_grave_win>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        e_grave_azerty: e_grave_azerty {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N3>, <&macro_cap_e_grave>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        e_grave_azerty_win: e_grave_azerty_win {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N3>, <&macro_cap_e_grave_win>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+
+        // ê et Ê
+        e_circ: e_circ {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&macro_e_circ>, <&macro_cap_e_circ>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        e_circ_win: e_circ_win {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&macro_e_circ_win>, <&macro_cap_e_circ_win>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+
+        // ñ et Ñ
+        n_tilde: n_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&macro_n_tilde>, <&macro_cap_n_tilde>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        n_tilde_win: n_tilde_win {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&macro_n_tilde_win>, <&macro_cap_n_tilde_win>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+
+
+
+
+
 
 
         /////////////////////////////////////////////////////////////////////////////
@@ -2291,7 +2532,12 @@
 
 
         // vérifier s'il reste du ////// Normal ////// et ////// Shift //////
+        // il faut aussi faire les behavior pour Symboles et Shift
 
+
+        // est-ce qu'il vaudrait pas mieux faire plus de layer, une 1DK et
+        // une 1DK Shift, une Symboles et une Symboles Shift ?
+        // et le modifier change la sticky layer
 
         td0: tap_dance_ergol_conf {
             compatible = "zmk,behavior-tap-dance";
@@ -2309,27 +2555,8 @@
             bindings = <&to 0>, <&tog 7>;
         };
 
-        e_aigu: e_aigu {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&macro_e_aigu>, <&macro_cap_e_aigu>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+
  
-        e_grave: e_grave {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&macro_e_grave>, <&macro_cap_e_grave>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        e_circ: e_circ {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&macro_e_circ>, <&macro_cap_e_circ>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         e_trem: e_trem {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -2337,19 +2564,7 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        a_grave: a_grave {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&macro_a_grave>, <&macro_cap_a_grave>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
 
-        a_circ: a_circ {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&macro_a_circ>, <&macro_cap_a_circ>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
 
         a_trem: a_trem {
             compatible = "zmk,behavior-mod-morph";
@@ -2365,12 +2580,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        u_circ: u_circ {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&macro_u_circ>, <&macro_cap_u_circ>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
 
         u_trem: u_trem {
             compatible = "zmk,behavior-mod-morph";
@@ -2407,12 +2616,7 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        c_cedi: c_cedi {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&macro_c_cedi>, <&macro_cap_c_cedi>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+        
     };
 
     keymap {
@@ -2482,7 +2686,7 @@
             bindings = <
 &trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans    &trans   &trans    &trans     &trans    &trans
 &trans      &a_circ    &c_cedi    &trans       &o_circ    &trans    &trans   &trans    &trans   &kp UNDER &sl 3      &u_circ    &trans
-&trans      &a_grave   &e_aigu    &e_grave     &e_circ    &trans    &trans   &kp LPAR  &kp RPAR &i_circ   &i_trem    &u_grave  &trans
+&trans      &a_grave   &e_acute    &e_grave     &e_circ    &trans    &trans   &kp LPAR  &kp RPAR &i_circ   &i_trem    &u_grave  &trans
 &trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans    &trans   &trans    &trans     &trans    &trans
 &trans      &trans     &trans     &trans       &trans     &trans    &trans   &trans    &trans   &trans    &trans     &trans
             >;
