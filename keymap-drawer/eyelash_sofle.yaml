@@ -80,7 +80,7 @@ layers:
   - F10
   - F11
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:keyboard-tab$$
+  - INS
   - HOME
   - $$mdi:arrow-up-bold$$
   - END
@@ -93,7 +93,7 @@ layers:
   - '*'
   - F12
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:apple-keyboard-caps$$
+  - $$mdi:printer-outline$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
