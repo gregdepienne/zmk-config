@@ -2540,7 +2540,9 @@
         // une 1DK Shift, une Symboles et une Symboles Shift ?
         // et le modifier change la sticky layer
         // le sticky layer 1dk et shift : faire un toggle/untoggle sur la 
-        // touche shift de la layer 1dk
+        // touche shift de la layer 1dk en macro
+        // permettrait de faire une layer CAPS, et donc de régler le problème
+        // c'est facile d'enlever les behavior en trop
 
         td0: tap_dance_ergol_conf {
             compatible = "zmk,behavior-tap-dance";
